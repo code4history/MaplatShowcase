@@ -438,8 +438,30 @@ async function runSlide(idx) {
   await wait(800);
 }
 
+/** 画面スリープ抑止（Screen Wake Lock API）。
+ * キオスク上映中にディスプレイが消灯しないようにする。HTTPS + 可視タブでのみ有効で、
+ * タブが不可視になるとOSに解放されるため、可視化のたびに取り直す。
+ * 非対応ブラウザ（古いSafari等）では静かに何もしない——その場合はOS側の
+ * スリープ設定（caffeinate / 電源設定）だけが頼りになる。 */
+async function keepAwake() {
+  if (!("wakeLock" in navigator)) return;
+  const acquire = async () => {
+    try {
+      await navigator.wakeLock.request("screen");
+      console.log("[demo] wake lock acquired");
+    } catch (e) {
+      console.warn("[demo] wake lock failed:", e && e.message || e);
+    }
+  };
+  document.addEventListener("visibilitychange", () => {
+    if (document.visibilityState === "visible") acquire();
+  });
+  await acquire();
+}
+
 async function main() {
   ensureFrameLoaded();
+  keepAwake();
   // 進行ドットを生成
   const dots = $("#dots");
   SLIDES.forEach(() => dots.appendChild(document.createElement("span")));
