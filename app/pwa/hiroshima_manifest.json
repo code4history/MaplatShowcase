@@ -1,0 +1,35 @@
+{
+  "name": "FOSS4G Hiroshima",
+  "short_name": "FOSS4G Hiroshima",
+  "background_color": "#ffffff",
+  "theme_color": "#ffffff",
+  "display": "standalone",
+  "start_url": "https://s.maplat.jp/r/hiroshimamap/",
+  "scope": "/r/hiroshimamap/",
+  "icons": [
+    {
+      "src": "pwa/hiroshima/manifest-icon-192.maskable.png",
+      "sizes": "192x192",
+      "type": "image/png",
+      "purpose": "any"
+    },
+    {
+      "src": "pwa/hiroshima/manifest-icon-192.maskable.png",
+      "sizes": "192x192",
+      "type": "image/png",
+      "purpose": "maskable"
+    },
+    {
+      "src": "pwa/hiroshima/manifest-icon-512.maskable.png",
+      "sizes": "512x512",
+      "type": "image/png",
+      "purpose": "any"
+    },
+    {
+      "src": "pwa/hiroshima/manifest-icon-512.maskable.png",
+      "sizes": "512x512",
+      "type": "image/png",
+      "purpose": "maskable"
+    }
+  ]
+}

@@ -1,0 +1,132 @@
+{
+  "appName": {
+    "ja": "ぷらっと FOSS4G Hiroshima 2026",
+    "en": "Maplat FOSS4G Hiroshima 2026"
+  },
+  "lang": "ja",
+  "sources": [
+    {
+      "mapID": "aki_hiroshima_castle",
+      "label": {
+        "ja": "正保広島城",
+        "en": "Hiroshima 1640s"
+      }
+    },
+    {
+      "mapID": "kaisei_hiroshima_jissoku",
+      "label": {
+        "ja": "明治広島市",
+        "en": "Hiroshima 1896"
+      }
+    },
+    {
+      "mapID": "aki_hiroshima_castle-merc",
+      "settingFile": "maps/aki_hiroshima_castle-merc.json",
+      "envelopeLngLats": [
+        [
+          132.4274826049805,
+          34.36299332676462
+        ],
+        [
+          132.49168395996097,
+          34.36299332676462
+        ],
+        [
+          132.49168395996097,
+          34.4275848504598
+        ],
+        [
+          132.4274826049805,
+          34.4275848504598
+        ]
+      ],
+      "label": {
+        "ja": "正保タイル",
+        "en": "1640s TIles"
+      }
+    },
+    {
+      "mapID": "gsi",
+      "settingFile": "maps/gsi.json"
+    },
+    {
+      "mapID": "gsi_ortho",
+      "settingFile": "maps/gsi_ortho.json"
+    },
+    {
+      "mapID": "rekichizu",
+      "settingFile": "maps/rekichizu.json"
+    },
+    {
+      "mapID": "gsi_ort_USA10",
+      "settingFile": "maps/gsi_ort_USA10.json"
+    },
+    {
+      "mapID": "gsi_ort_old10",
+      "settingFile": "maps/gsi_ort_old10.json"
+    },
+    {
+      "mapID": "gsi_gazo1",
+      "settingFile": "maps/gsi_gazo1.json"
+    },
+    {
+      "mapID": "gsi_gazo2",
+      "settingFile": "maps/gsi_gazo2.json"
+    },
+    {
+      "mapID": "gsi_gazo4",
+      "settingFile": "maps/gsi_gazo4.json"
+    },
+    {
+      "mapID": "hiroshima2man",
+      "settingFile": "maps/hiroshima2man.json"
+    },
+    {
+      "mapID": "hiroshima00",
+      "settingFile": "maps/hiroshima00.json"
+    },
+    {
+      "mapID": "hiroshima01",
+      "settingFile": "maps/hiroshima01.json"
+    },
+    {
+      "mapID": "hiroshima02",
+      "settingFile": "maps/hiroshima02.json"
+    },
+    {
+      "mapID": "hiroshima03",
+      "settingFile": "maps/hiroshima03.json"
+    },
+    {
+      "mapID": "hiroshima04",
+      "settingFile": "maps/hiroshima04.json"
+    },
+    {
+      "mapID": "google",
+      "settingFile": "maps/google.json"
+    },
+    {
+      "mapID": "osm",
+      "settingFile": "maps/osm.json"
+    }
+  ],
+  "description": {
+    "ja": "FOSS4G Hiroshima 2026の会場と、広島市内・宮島の見どころを地図でたどるMaplat アプリ。明治期の実測図と現在の地図を重ねて、同じ場所の変化を見比べられます。",
+    "en": "A map guide to the venues of FOSS4G Hiroshima 2026 and to the sights of central Hiroshima and Miyajima, laying an 1896 survey map over the present-day city so you can see the same ground in two eras. Based on Maplat application."
+  },
+  "splash": "e987a508-0229-4137-a324-89f8c1703ebc.png",
+  "homePosition": [
+    132.451219,
+    34.39204
+  ],
+  "defaultZoom": 17,
+  "startFrom": "aki_hiroshima_castle",
+  "pois": [
+    {
+      "layer": "pois/foss4g2026_venues_poi.geojson"
+    },
+    {
+      "layer": "pois/foss4g2026_tourism_poi.geojson"
+    }
+  ]
+}

@@ -1,0 +1,233 @@
+/* Maplat 紹介スライドショー（キオスク・自動ループ） */
+
+html, body {
+  margin: 0;
+  padding: 0;
+  width: 100%;
+  height: 100%;
+  overflow: hidden;
+  background: #101418;
+  font-family: "Hiragino Sans", "Noto Sans JP", "Helvetica Neue", Arial, sans-serif;
+  color: #f2f4f6;
+}
+
+#stage {
+  position: fixed;
+  inset: 0;
+}
+
+/* ---- スライド共通 ---- */
+.slide {
+  position: absolute;
+  inset: 0;
+  opacity: 0;
+  visibility: hidden;
+  transition: opacity 0.9s ease;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.slide.active {
+  opacity: 1;
+  visibility: visible;
+}
+
+/* ---- 静止スライド ---- */
+.slide.static {
+  flex-direction: column;
+  text-align: center;
+  background:
+    radial-gradient(1200px 700px at 30% 20%, #24313d 0%, transparent 60%),
+    radial-gradient(1000px 800px at 80% 85%, #2d2331 0%, transparent 55%),
+    #101418;
+  padding: 6vh 8vw;
+  box-sizing: border-box;
+}
+
+.slide.static h1 {
+  font-size: clamp(2.6rem, 7vw, 5.2rem);
+  margin: 0 0 1.2rem;
+  letter-spacing: 0.04em;
+}
+
+.slide.static .tagline-ja {
+  font-size: clamp(1.2rem, 2.6vw, 1.9rem);
+  margin: 0.4rem 0;
+}
+
+.slide.static .tagline-en {
+  font-size: clamp(0.95rem, 2vw, 1.35rem);
+  color: #aab6c2;
+  margin: 0.2rem 0;
+}
+
+.slide.static .url {
+  margin-top: 3rem;
+  font-size: clamp(1rem, 2.2vw, 1.5rem);
+  color: #7ec8ff;
+  letter-spacing: 0.03em;
+}
+
+/* ---- ライブデモスライド ---- */
+.slide.live iframe {
+  position: absolute;
+  inset: 0;
+  width: 100%;
+  height: 100%;
+  border: 0;
+}
+
+.slide.live .loading {
+  position: absolute;
+  inset: 0;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+  gap: 0.8rem;
+  background: #101418;
+  transition: opacity 0.6s ease;
+  z-index: 5;
+}
+
+.slide.live .loading.hidden {
+  opacity: 0;
+  pointer-events: none;
+}
+
+.spinner {
+  width: 44px;
+  height: 44px;
+  border: 4px solid #2c3a46;
+  border-top-color: #7ec8ff;
+  border-radius: 50%;
+  animation: spin 0.9s linear infinite;
+}
+
+@keyframes spin { to { transform: rotate(360deg); } }
+
+/* ---- 字幕（日英 2 段） ---- */
+#subtitle {
+  position: fixed;
+  left: 50%;
+  bottom: 4vh;
+  transform: translateX(-50%);
+  max-width: min(88vw, 980px);
+  padding: 0.9rem 1.6rem;
+  border-radius: 12px;
+  background: rgba(10, 14, 18, 0.78);
+  backdrop-filter: blur(4px);
+  text-align: center;
+  opacity: 0;
+  transition: opacity 0.45s ease;
+  pointer-events: none;
+  z-index: 50;
+  box-shadow: 0 4px 24px rgba(0, 0, 0, 0.4);
+}
+
+#subtitle.visible { opacity: 1; }
+
+#subtitle .sub-ja {
+  font-size: clamp(1.05rem, 2.4vw, 1.55rem);
+  font-weight: 600;
+  line-height: 1.5;
+}
+
+#subtitle .sub-en {
+  margin-top: 0.25rem;
+  font-size: clamp(0.85rem, 1.8vw, 1.1rem);
+  color: #b9c6d2;
+  line-height: 1.45;
+}
+
+/* ---- 進行ドット ---- */
+#dots {
+  position: fixed;
+  right: 1.2rem;
+  top: 1.2rem;
+  display: flex;
+  gap: 0.45rem;
+  z-index: 50;
+}
+
+#dots span {
+  width: 9px;
+  height: 9px;
+  border-radius: 50%;
+  background: rgba(255, 255, 255, 0.25);
+  transition: background 0.3s;
+}
+
+#dots span.on { background: #7ec8ff; }
+
+/* ---- ブランド素材 ---- */
+@font-face {
+  font-family: "Maplat100";
+  src: url("assets/Maplat100.ttf") format("truetype");
+  font-display: block;
+}
+
+/* Maplat ワードマーク。Maplat100.ttf は「M」1文字がワードマーク全体のグリフで、
+   a/p/l/a/t は空グリフ（advance のみ）。∴ 綴ってよいのは「M」だけ。 */
+.wordmark {
+  font-family: "Maplat100", sans-serif;
+  font-weight: normal;
+  letter-spacing: 0;
+}
+
+.slide.static h1.wordmark {
+  font-size: clamp(3rem, 9vw, 6.5rem);
+  line-height: 1.1;
+}
+
+.logo-row {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: clamp(1.2rem, 4vw, 3rem);
+  margin-top: 2.4rem;
+  flex-wrap: wrap;
+}
+
+.logo-row img {
+  height: clamp(48px, 9vh, 84px);
+  width: auto;
+}
+
+.logo-row img.qr {
+  height: clamp(96px, 18vh, 150px);
+}
+
+/* 未支給素材のプレースホルダ（正式ロゴ差し替え待ち） */
+.logo-placeholder {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  height: clamp(48px, 9vh, 84px);
+  padding: 0 1.2rem;
+  border: 1.5px dashed #5b6b7a;
+  border-radius: 8px;
+  color: #8fa0b0;
+  font-size: 0.85rem;
+  text-align: center;
+  line-height: 1.3;
+}
+
+.anniv {
+  margin-top: 0.6rem;
+  font-size: clamp(1rem, 2.4vw, 1.5rem);
+  color: #d9c48a;
+  letter-spacing: 0.12em;
+}
+
+/* ---- 支給ロゴ ---- */
+.logo-10th {
+  width: min(72vw, 560px);
+  height: auto;
+  margin-bottom: 0.6rem;
+}
+
+.logo-row img.f4g {
+  height: clamp(72px, 14vh, 120px);
+}

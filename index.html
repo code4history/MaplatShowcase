@@ -1,0 +1,115 @@
+<!DOCTYPE html>
+<html lang="ja">
+
+<head>
+  <meta charset="UTF-8">
+  <title>Maplat Showcase</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="description" content="古地図を歪めずに現代地図と重ね合わせる Maplat のショーケース。自動デモとライブアプリの入口。 / Showcases of Maplat, the historical-map viewer that never distorts the original drawing.">
+  <link rel="icon" href="app/favicon.ico">
+  <style>
+    @font-face {
+      font-family: "Maplat100";
+      src: url("demo/assets/Maplat100.ttf") format("truetype");
+      font-display: block;
+    }
+
+    html, body {
+      margin: 0;
+      padding: 0;
+      min-height: 100%;
+      background:
+        radial-gradient(1200px 700px at 30% 15%, #24313d 0%, transparent 60%),
+        radial-gradient(1000px 800px at 85% 90%, #2d2331 0%, transparent 55%),
+        #101418;
+      color: #f2f4f6;
+      font-family: "Hiragino Sans", "Noto Sans JP", "Helvetica Neue", Arial, sans-serif;
+    }
+
+    .wrap {
+      max-width: 880px;
+      margin: 0 auto;
+      padding: 9vh 6vw 12vh;
+      text-align: center;
+    }
+
+    h1.wordmark {
+      font-family: "Maplat100", sans-serif;
+      font-weight: normal;
+      font-size: clamp(3rem, 9vw, 5.5rem);
+      margin: 0 0 0.4rem;
+    }
+
+    .site-name {
+      font-size: clamp(1rem, 2.4vw, 1.3rem);
+      letter-spacing: 0.35em;
+      color: #7ec8ff;
+      text-transform: uppercase;
+      margin: 0 0 0.9rem;
+    }
+
+    .lede-ja { margin: 0.2rem 0; font-size: clamp(1rem, 2.2vw, 1.25rem); }
+    .lede-en { margin: 0.2rem 0 3rem; font-size: clamp(0.85rem, 1.8vw, 1.05rem); color: #aab6c2; }
+
+    .cards { display: flex; flex-direction: column; gap: 1.4rem; }
+
+    .card {
+      display: block;
+      text-decoration: none;
+      color: inherit;
+      background: rgba(255, 255, 255, 0.045);
+      border: 1px solid rgba(255, 255, 255, 0.12);
+      border-radius: 14px;
+      padding: 1.6rem 1.8rem;
+      text-align: left;
+      transition: border-color 0.25s, background 0.25s, transform 0.25s;
+    }
+
+    .card:hover {
+      border-color: #7ec8ff;
+      background: rgba(126, 200, 255, 0.07);
+      transform: translateY(-2px);
+    }
+
+    .card h2 { margin: 0 0 0.5rem; font-size: clamp(1.15rem, 2.6vw, 1.5rem); }
+    .card .desc-ja { margin: 0.15rem 0; font-size: 0.98rem; line-height: 1.65; }
+    .card .desc-en { margin: 0.15rem 0 0.9rem; font-size: 0.85rem; line-height: 1.6; color: #aab6c2; }
+    .card .go { color: #7ec8ff; font-size: 0.95rem; }
+    .card .sub-links { margin-top: 0.5rem; font-size: 0.85rem; color: #aab6c2; }
+    .card .sub-links a { color: #9fd4ff; }
+
+    footer {
+      margin-top: 4rem;
+      font-size: 0.8rem;
+      color: #77879a;
+      line-height: 1.8;
+    }
+    footer a { color: #9fd4ff; text-decoration: none; }
+  </style>
+</head>
+
+<body>
+  <div class="wrap">
+    <h1 class="wordmark">M</h1>
+    <p class="site-name">Showcase</p>
+    <p class="lede-ja">古地図を、歪めずに、今の地図と重ねる。Maplat のデモを集めた場所です。</p>
+    <p class="lede-en">Historical maps over the modern world, without distortion — a collection of Maplat demos.</p>
+
+    <div class="cards">
+      <a class="card" href="foss4g_hiroshima_2026.html">
+        <h2>FOSS4G Hiroshima 2026 — 自動デモ / Auto-playing demo</h2>
+        <p class="desc-ja">正保年間の広島城下絵図と明治29年の実測図の上を、GPS の現在地が歩きまわる自動上映。宮島散策、ワープ比較、三角網の種明かしまで、約3分でループします。</p>
+        <p class="desc-en">A hands-free tour: a live GPS dot walks across a 1640s pictorial map and an 1896 survey map of Hiroshima — Miyajima stroll, warp comparison and the triangulated-network reveal, looping in about three minutes.</p>
+        <span class="go">▶ 上映をみる / Watch</span>
+        <p class="sub-links">実アプリ / Live app: <a href="https://s.maplat.jp/r/hiroshimamap/" onclick="event.stopPropagation()">s.maplat.jp/r/hiroshimamap/</a></p>
+      </a>
+    </div>
+
+    <footer>
+      <a href="https://github.com/code4history/Maplat">Maplat</a> — 10th Anniversary (2016–2026)<br>
+      © Code for History / Nayuta, Inc.
+    </footer>
+  </div>
+</body>
+
+</html>

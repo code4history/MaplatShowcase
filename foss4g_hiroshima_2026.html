@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="ja">
+
+<head>
+  <meta charset="UTF-8">
+  <title>Maplat Demo — FOSS4G Hiroshima 2026</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="description" content="古地図を歪めずに現代地図と重ね合わせる Maplat の自動デモ。FOSS4G Hiroshima 2026。">
+  <link rel="icon" href="app/favicon.ico">
+  <link rel="stylesheet" href="demo/demo.css">
+</head>
+
+<body>
+  <div id="stage">
+
+    <!-- スライド 1: タイトル -->
+    <section id="slide-title" class="slide static">
+      <h1 class="wordmark">M</h1>
+      <p class="tagline-ja">古地図を、歪めずに、今の地図と重ねる。</p>
+      <p class="tagline-en">Historical maps over the modern world — without distortion.</p>
+      <div class="logo-row">
+        <img class="f4g" src="demo/assets/foss4g2026-logo.svg" alt="FOSS4G Hiroshima 2026">
+        <img class="qr" src="demo/assets/qr-app-inverted.png" alt="QR: Maplat FOSS4G Hiroshima app">
+      </div>
+      <p class="url">s.maplat.jp/r/hiroshimamap/</p>
+    </section>
+
+    <!-- スライド 2: ライブデモ -->
+    <section id="slide-live" class="slide live">
+      <iframe id="maplat-frame" data-src="demo/embed.html" title="Maplat live demo"></iframe>
+      <div class="loading">
+        <div class="spinner"></div>
+        <div class="loading-text">Maplat を起動しています… / Starting Maplat…</div>
+      </div>
+    </section>
+
+    <!-- スライド 3: アウトロ -->
+    <section id="slide-outro" class="slide static">
+      <img class="logo-10th" src="demo/assets/maplat-10th.svg" alt="Maplat 10th Anniversary">
+      <p class="tagline-ja">会場と広島・宮島の見どころを、17世紀と19世紀の絵図で歩く。</p>
+      <p class="tagline-en">Walk the venues and sights of Hiroshima and Miyajima on maps from the 17th and 19th centuries.</p>
+      <div class="logo-row">
+        <img src="demo/assets/nayuta-dark.svg" alt="Nayuta, Inc.">
+        <img class="f4g" src="demo/assets/foss4g2026-logo.svg" alt="FOSS4G Hiroshima 2026">
+      </div>
+      <p class="url">s.maplat.jp/r/hiroshimamap/</p>
+    </section>
+
+  </div>
+
+  <!-- 字幕（日英2段） -->
+  <div id="subtitle">
+    <div class="sub-ja"></div>
+    <div class="sub-en"></div>
+  </div>
+
+  <div id="dots"></div>
+
+  <script src="demo/demo.js"></script>
+</body>
+
+</html>

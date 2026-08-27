@@ -1,0 +1,1069 @@
+{
+  "type": "FeatureCollection",
+  "id": "foss4g2026_tourism_poi",
+  "name": {
+    "ja": "FOSS4G 2026 Hiroshima 観光スポット",
+    "en": "FOSS4G 2026 Hiroshima Sightseeing"
+  },
+  "lang": "ja",
+  "properties": {
+    "icon": "imgs/foss4g2026-spot-shrine.png",
+    "selectedIcon": "imgs/foss4g2026-spot-shrine-selected.png"
+  },
+  "features": [
+    {
+      "type": "Feature",
+      "id": "atomic-bomb-dome",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          132.45358,
+          34.3954714
+        ]
+      },
+      "properties": {
+        "name": {
+          "ja": "原爆ドーム",
+          "en": "Atomic Bomb Dome"
+        },
+        "address": {
+          "ja": "広島市中区大手町1-10",
+          "en": "1-10 Ōtemachi, Naka-ku, Hiroshima"
+        },
+        "desc": {
+          "ja": "<b>世界遺産</b><br><br>1915年にチェコの建築家ヤン・レツルの設計で広島県物産陳列館として建てられ、1945年8月6日の原爆で3階建ての本体はほぼ全壊し、ドーム部分の骨組みと外壁の一部が残った。爆風がほぼ直上から加わったこと、窓が多く風が吹き抜けたこと、銅板の屋根が熱線で先に融けたことなどが重なった結果とされる。保存工事を重ねながら被爆当時の姿をとどめ、1996年に世界文化遺産に登録された。2025年9月18日には、明治以降の遺跡として全国で初めて国の特別史跡に指定された。<br><br>見学自由・24時間（外観のみ、内部は非公開）<br><br>写真: Balon Greyjoy / CC0 — Wikimedia Commons<br><br><a href=\"https://2026.foss4g.org/ja/attending/travel-guide/\" target=\"_blank\">FOSS4G 旅行ガイド</a>",
+          "en": "<b>UNESCO World Heritage Site</b><br><br>Built in 1915 to a design by the Czech architect Jan Letzel as the Hiroshima Prefectural Commercial Exhibition Hall, the three-storey main block was almost wholly destroyed by the atomic bomb of 6 August 1945, leaving the frame of the dome and parts of the outer walls. The blast striking almost from overhead, the many windows that let it blow through, and a copper roof that melted first in the heat are all thought to have contributed. Repeatedly conserved in that condition, it was inscribed on the World Heritage List in 1996, and in September 2025 it became the first site of the modern era to be designated a Special Historic Site of Japan.<br><br>Freely accessible at any hour; exterior only, the interior is closed<br><br>Photo: Balon Greyjoy / CC0 — Wikimedia Commons<br><br><a href=\"https://2026.foss4g.org/en/attending/travel-guide/\" target=\"_blank\">FOSS4G travel guide</a>"
+        },
+        "image": [
+          {
+            "src": "https://upload.wikimedia.org/wikipedia/commons/thumb/1/10/20181111_Atomic_Bomb_Dome-5.jpg/1280px-20181111_Atomic_Bomb_Dome-5.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail",
+            "caption": "Balon Greyjoy / CC0 — Wikimedia Commons",
+            "page": "https://commons.wikimedia.org/wiki/File:20181111_Atomic_Bomb_Dome-5.jpg"
+          }
+        ],
+        "icon": "imgs/foss4g2026-spot-heritage.png",
+        "selectedIcon": "imgs/foss4g2026-spot-heritage-selected.png"
+      }
+    },
+    {
+      "type": "Feature",
+      "id": "peace-memorial-park",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          132.451952,
+          34.3931649
+        ]
+      },
+      "properties": {
+        "name": {
+          "ja": "広島平和記念公園",
+          "en": "Hiroshima Peace Memorial Park"
+        },
+        "address": {
+          "ja": "広島市中区中島町1・大手町1-10",
+          "en": "Nakajima-chō 1 and Ōtemachi 1-10, Naka-ku, Hiroshima"
+        },
+        "desc": {
+          "ja": "<b>公園・慰霊</b><br><br>元安川と本川に挟まれた中島地区は、被爆前は繁華な町並みだった。戦後この一帯が慰霊と平和祈念の場として整備され、丹下健三を中心とする設計チームの案により、原爆ドーム・慰霊碑・資料館を一直線に結ぶ軸線が引かれた。原爆死没者慰霊碑、原爆の子の像、平和の灯などが園内に点在する。<br><br>入園自由<br><br>写真: TimMilesWright / CC0 — Wikimedia Commons<br><br><a href=\"https://2026.foss4g.org/ja/attending/travel-guide/\" target=\"_blank\">FOSS4G 旅行ガイド</a>",
+          "en": "<b>Park and memorial</b><br><br>The Nakajima district, on the spit between the Motoyasu and Hon rivers, was a busy quarter before the bombing. After the war the area was laid out as a place of mourning and of prayer for peace, to a competition-winning design by the team around Tange Kenzō that aligns the Atomic Bomb Dome, the cenotaph and the museum on a single axis. The Memorial Cenotaph, the Children's Peace Monument and the Flame of Peace stand within the grounds.<br><br>Open at all times, free of charge<br><br>Photo: TimMilesWright / CC0 — Wikimedia Commons<br><br><a href=\"https://2026.foss4g.org/en/attending/travel-guide/\" target=\"_blank\">FOSS4G travel guide</a>"
+        },
+        "image": [
+          {
+            "src": "https://upload.wikimedia.org/wikipedia/commons/thumb/d/d8/Hiroshima_Peace_Memorial_Park_cenotaph.jpg/1280px-Hiroshima_Peace_Memorial_Park_cenotaph.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail",
+            "caption": "TimMilesWright / CC0 — Wikimedia Commons",
+            "page": "https://commons.wikimedia.org/wiki/File:Hiroshima_Peace_Memorial_Park_cenotaph.jpg"
+          }
+        ],
+        "icon": "imgs/foss4g2026-spot-garden.png",
+        "selectedIcon": "imgs/foss4g2026-spot-garden-selected.png"
+      }
+    },
+    {
+      "type": "Feature",
+      "id": "peace-memorial-museum",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          132.4525361,
+          34.3916345
+        ]
+      },
+      "properties": {
+        "name": {
+          "ja": "広島平和記念資料館",
+          "en": "Hiroshima Peace Memorial Museum"
+        },
+        "address": {
+          "ja": "広島市中区中島町1-2",
+          "en": "1-2 Nakajima-chō, Naka-ku, Hiroshima"
+        },
+        "desc": {
+          "ja": "<b>博物館</b><br><br>被爆の実相を遺品・写真・証言で伝える市立の資料館。丹下健三の設計による本館は地上から柱で持ち上げられた造りで、戦後建築として国の重要文化財に指定されている。展示は本館と東館に分かれ、順路は東館から始まる。<br><br>開館 9〜11月 7:30〜19:00（時期により異なる）<br>7:30〜8:30と17:30〜18:30の常設展示室入場はオンライン事前予約が必要<br>常設展示 大人200円／高校生100円／中学生以下無料<br>休館 12月30日・31日、2月中旬（展示入替）<br>TEL 082-241-4004<br><br>写真: Ridiculopathy / CC0 — Wikimedia Commons<br><br><a href=\"https://2026.foss4g.org/ja/attending/travel-guide/\" target=\"_blank\">FOSS4G 旅行ガイド</a>",
+          "en": "<b>Museum</b><br><br>The city's museum of the atomic bombing, telling it through belongings, photographs and testimony. The Main Building, designed by Tange Kenzō and lifted clear of the ground on columns, is designated an Important Cultural Property as a work of post-war architecture. The displays are divided between the Main and East buildings, with the route beginning in the East Building.<br><br>Open 7:30–19:00 in September–November; hours vary by season<br>Entry to the permanent exhibition between 7:30–8:30 and 17:30–18:30 requires an online reservation<br>Permanent exhibition ¥200 adults, ¥100 high-school students, free for junior-high and younger<br>Closed 30–31 December and for a display changeover in mid-February<br>Tel. +81 82-241-4004<br><br>Photo: Ridiculopathy / CC0 — Wikimedia Commons<br><br><a href=\"https://2026.foss4g.org/en/attending/travel-guide/\" target=\"_blank\">FOSS4G travel guide</a>"
+        },
+        "image": [
+          {
+            "src": "https://upload.wikimedia.org/wikipedia/commons/thumb/a/af/Oct2025._Hiroshima_Peace_Memorial_Museum%2C_Japan_03.jpg/1280px-Oct2025._Hiroshima_Peace_Memorial_Museum%2C_Japan_03.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail",
+            "caption": "Ridiculopathy / CC0 — Wikimedia Commons",
+            "page": "https://commons.wikimedia.org/wiki/File:Oct2025._Hiroshima_Peace_Memorial_Museum,_Japan_03.jpg"
+          }
+        ],
+        "icon": "imgs/foss4g2026-spot-museum.png",
+        "selectedIcon": "imgs/foss4g2026-spot-museum-selected.png"
+      }
+    },
+    {
+      "type": "Feature",
+      "id": "rest-house",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          132.4532633,
+          34.3938263
+        ]
+      },
+      "properties": {
+        "name": {
+          "ja": "広島市レストハウス",
+          "en": "Hiroshima Rest House"
+        },
+        "address": {
+          "ja": "広島市中区中島町1-1",
+          "en": "1-1 Nakajima-chō, Naka-ku, Hiroshima"
+        },
+        "desc": {
+          "ja": "<b>被爆建物・観光案内所</b><br><br>1929年に大正屋呉服店として建てられ、のちに広島県燃料配給統制組合が入った建物。爆心地から約170mで被爆したが躯体が残り、地下室にいた職員1名が生き延びた。現在は観光案内所と土産物店になっており、被爆当時のまま保存された地下室を見学できる。<br><br>入館無料／8:30〜18:00（3月1日〜11月30日）・年中無休<br><br>写真: かるちる / CC0 — Wikimedia Commons<br><br><a href=\"https://2026.foss4g.org/ja/attending/travel-guide/\" target=\"_blank\">FOSS4G 旅行ガイド</a>",
+          "en": "<b>Atomic-bombed building and tourist information</b><br><br>Built in 1929 as the Taishōya kimono shop and later occupied by the prefectural fuel rationing association, the building stood about 170 m from the hypocentre and its structure survived. Of the thirty-seven people inside, the only one to live was Nomura Eizō, who was in the basement. It now houses a tourist information centre and a souvenir shop, and the basement is preserved as it was and can be visited.<br><br>Admission free; open 8:30–18:00 from 1 March to 30 November, no closing days<br><br>Photo: かるちる / CC0 — Wikimedia Commons<br><br><a href=\"https://2026.foss4g.org/en/attending/travel-guide/\" target=\"_blank\">FOSS4G travel guide</a>"
+        },
+        "image": [
+          {
+            "src": "https://upload.wikimedia.org/wikipedia/commons/thumb/f/f6/Rest_House_of_Hiroshima_Peace_Park_at_night.jpg/1280px-Rest_House_of_Hiroshima_Peace_Park_at_night.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail",
+            "caption": "かるちる / CC0 — Wikimedia Commons",
+            "page": "https://commons.wikimedia.org/wiki/File:Rest_House_of_Hiroshima_Peace_Park_at_night.jpg"
+          }
+        ],
+        "icon": "imgs/foss4g2026-spot-heritage.png",
+        "selectedIcon": "imgs/foss4g2026-spot-heritage-selected.png"
+      }
+    },
+    {
+      "type": "Feature",
+      "id": "aioi-bridge",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          132.4524698,
+          34.3960912
+        ]
+      },
+      "properties": {
+        "name": {
+          "ja": "相生橋",
+          "en": "Aioi Bridge"
+        },
+        "address": {
+          "ja": "広島市中区大手町1丁目〜本川町・基町",
+          "en": "Ōtemachi 1-chōme to Honkawa-chō and Motomachi, Naka-ku, Hiroshima"
+        },
+        "desc": {
+          "ja": "<b>橋・戦跡</b><br><br>本川と元安川の分岐点に架かる、上から見るとT字形をした珍しい橋。その形が空から際立って見えたため原爆投下の照準点に選ばれた。被爆時の橋は損傷しながらも落ちず、1983年に架け替えられて現在の姿になっている。中央から中州の平和記念公園へ降りることができる。<br><br>通行自由<br><br>写真: Taisyo「Aioi Bridge 20160923-1.jpg」/ CC BY 3.0 <https://creativecommons.org/licenses/by/3.0> — Wikimedia Commons（表示用に縮小）<br><br><a href=\"https://2026.foss4g.org/ja/attending/travel-guide/\" target=\"_blank\">FOSS4G 旅行ガイド</a>",
+          "en": "<b>Bridge and war site</b><br><br>A rare T-shaped bridge at the point where the Hon and Motoyasu rivers divide; the spur to the spit that gives it the shape was added in 1934. Its distinctive outline from the air made it the aiming point for the atomic bomb. The bridge of 1945 was damaged but did not fall; the present structure replaced it in 1983. A spur from the centre of the bridge leads down into Peace Memorial Park on the spit below.<br><br>Open to pedestrians at all times<br><br>Photo: Taisyo, \"Aioi Bridge 20160923-1.jpg\", CC BY 3.0 <https://creativecommons.org/licenses/by/3.0>, via Wikimedia Commons (resized)<br><br><a href=\"https://2026.foss4g.org/en/attending/travel-guide/\" target=\"_blank\">FOSS4G travel guide</a>"
+        },
+        "image": [
+          {
+            "src": "https://upload.wikimedia.org/wikipedia/commons/thumb/3/34/Aioi_Bridge_20160923-1.jpg/1280px-Aioi_Bridge_20160923-1.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail",
+            "caption": "Taisyo「Aioi Bridge 20160923-1.jpg」/ CC BY 3.0 <https://creativecommons.org/licenses/by/3.0> — Wikimedia Commons（表示用に縮小）",
+            "page": "https://commons.wikimedia.org/wiki/File:Aioi_Bridge_20160923-1.jpg"
+          }
+        ],
+        "icon": "imgs/foss4g2026-spot-heritage.png",
+        "selectedIcon": "imgs/foss4g2026-spot-heritage-selected.png"
+      }
+    },
+    {
+      "type": "Feature",
+      "id": "orizuru-tower",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          132.4546858,
+          34.3956585
+        ]
+      },
+      "properties": {
+        "name": {
+          "ja": "おりづるタワー",
+          "en": "Hiroshima Orizuru Tower"
+        },
+        "address": {
+          "ja": "広島市中区大手町1-2-1",
+          "en": "1-2-1 Ōtemachi, Naka-ku, Hiroshima"
+        },
+        "desc": {
+          "ja": "<b>展望施設</b><br><br>原爆ドームの隣に建つオフィスビルを改修した展望施設。屋上の展望台からは原爆ドームと平和記念公園、市街地と瀬戸内の島々までを一望できる。折り鶴を投入できる吹き抜けや、木造の斜路を歩いて降りる経路が設けられている。<br><br>営業 10:00〜18:00（展望台の当日券販売・入場は閉館30分前まで）<br>展望台 大人2,200円／中・高生1,400円／小学生900円／幼児（4歳以上）600円<br>TEL 082-569-6803<br><br>写真: Taisyo「HIROSHIMA ORIZURU TOWER 2016-0923-1.jpg」/ CC BY 3.0 <https://creativecommons.org/licenses/by/3.0> — Wikimedia Commons（表示用に縮小）<br><br><a href=\"https://2026.foss4g.org/ja/attending/travel-guide/\" target=\"_blank\">FOSS4G 旅行ガイド</a>",
+          "en": "<b>Observation tower</b><br><br>An observation deck created by converting an office building next to the Atomic Bomb Dome. From the rooftop the Dome, Peace Memorial Park, the city and the islands of the Inland Sea are all in view. Inside are a full-height shaft into which visitors can drop paper cranes and a timber ramp that can be walked down instead of taking the lift.<br><br>Open 10:00–18:00; same-day tickets and entry to the deck close 30 minutes before<br>Observation deck ¥2,200 adults, ¥1,400 secondary students, ¥900 primary pupils, ¥600 age 4 and over<br>Tel. +81 82-569-6803<br><br>Photo: Taisyo, \"HIROSHIMA ORIZURU TOWER 2016-0923-1.jpg\", CC BY 3.0 <https://creativecommons.org/licenses/by/3.0>, via Wikimedia Commons (resized)<br><br><a href=\"https://2026.foss4g.org/en/attending/travel-guide/\" target=\"_blank\">FOSS4G travel guide</a>"
+        },
+        "image": [
+          {
+            "src": "https://upload.wikimedia.org/wikipedia/commons/thumb/a/ae/HIROSHIMA_ORIZURU_TOWER_2016-0923-1.jpg/1280px-HIROSHIMA_ORIZURU_TOWER_2016-0923-1.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail",
+            "caption": "Taisyo「HIROSHIMA ORIZURU TOWER 2016-0923-1.jpg」/ CC BY 3.0 <https://creativecommons.org/licenses/by/3.0> — Wikimedia Commons（表示用に縮小）",
+            "page": "https://commons.wikimedia.org/wiki/File:HIROSHIMA_ORIZURU_TOWER_2016-0923-1.jpg"
+          }
+        ],
+        "icon": "imgs/foss4g2026-spot-scenic.png",
+        "selectedIcon": "imgs/foss4g2026-spot-scenic-selected.png"
+      }
+    },
+    {
+      "type": "Feature",
+      "id": "hiroshima-castle",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          132.4590543,
+          34.4027367
+        ]
+      },
+      "properties": {
+        "name": {
+          "ja": "広島城",
+          "en": "Hiroshima Castle"
+        },
+        "address": {
+          "ja": "広島市中区基町21-1",
+          "en": "21-1 Motomachi, Naka-ku, Hiroshima"
+        },
+        "desc": {
+          "ja": "<b>城跡</b><br><br>1589年に毛利輝元が太田川の三角州に築いた平城で、広島という都市の起点にあたる。天守は1945年の原爆で倒壊し、1958年に鉄骨鉄筋コンクリート造で外観復元された。堀と石垣、被爆樹木、復元された二の丸の櫓と門が残る。<br><br>天守は2026年3月に閉城（外観の鑑賞は可能）<br>二の丸復元建物 4〜9月 9:00〜17:30／10〜3月 9:00〜16:30・入館無料<br>TEL 082-221-7512<br><br>写真: Suicasmo「Hiroshima Castle Keep Tower 20170124-2.jpg」/ CC BY-SA 4.0 <https://creativecommons.org/licenses/by-sa/4.0> — Wikimedia Commons（表示用に縮小）<br><br><a href=\"https://2026.foss4g.org/ja/attending/travel-guide/\" target=\"_blank\">FOSS4G 旅行ガイド</a>",
+          "en": "<b>Castle site</b><br><br>A castle on the flat of the Ōta delta, begun in 1589 by Mōri Terumoto, and the origin of the city itself. The keep collapsed in the atomic bombing of 1945 and its outward form was rebuilt in steel-reinforced concrete in 1958. The moats and stone ramparts survive, together with trees that lived through the bombing and the reconstructed turrets and gate of the second bailey.<br><br>The keep closed in March 2026; it can still be seen from outside<br>Second-bailey buildings 9:00–17:30 (Apr–Sep) or 9:00–16:30 (Oct–Mar), free<br>Tel. +81 82-221-7512<br><br>Photo: Suicasmo, \"Hiroshima Castle Keep Tower 20170124-2.jpg\", CC BY-SA 4.0 <https://creativecommons.org/licenses/by-sa/4.0>, via Wikimedia Commons (resized)<br><br><a href=\"https://2026.foss4g.org/en/attending/travel-guide/\" target=\"_blank\">FOSS4G travel guide</a>"
+        },
+        "image": [
+          {
+            "src": "https://upload.wikimedia.org/wikipedia/commons/thumb/3/3e/Hiroshima_Castle_Keep_Tower_20170124-2.jpg/1280px-Hiroshima_Castle_Keep_Tower_20170124-2.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail",
+            "caption": "Suicasmo「Hiroshima Castle Keep Tower 20170124-2.jpg」/ CC BY-SA 4.0 <https://creativecommons.org/licenses/by-sa/4.0> — Wikimedia Commons（表示用に縮小）",
+            "page": "https://commons.wikimedia.org/wiki/File:Hiroshima_Castle_Keep_Tower_20170124-2.jpg"
+          }
+        ],
+        "icon": "imgs/foss4g2026-spot-heritage.png",
+        "selectedIcon": "imgs/foss4g2026-spot-heritage-selected.png"
+      }
+    },
+    {
+      "type": "Feature",
+      "id": "gokoku-shrine",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          132.4588682,
+          34.4011
+        ]
+      },
+      "properties": {
+        "name": {
+          "ja": "広島護国神社",
+          "en": "Hiroshima Gokoku Shrine"
+        },
+        "address": {
+          "ja": "広島市中区基町21-2",
+          "en": "21-2 Motomachi, Naka-ku, Hiroshima"
+        },
+        "desc": {
+          "ja": "<b>神社</b><br><br>広島城の本丸跡に鎮座する神社。もとは別の場所にあったが被爆で焼失し、1956年に現在地へ移った。初詣の参拝者が中国地方でもっとも多い神社として知られる。<br><br>境内自由<br><br>写真: DXR「Torii, Hiroshima Gokoku Shrine 20190417 1.jpg」/ CC BY-SA 4.0 <https://creativecommons.org/licenses/by-sa/4.0> — Wikimedia Commons（表示用に縮小）<br><br><a href=\"https://2026.foss4g.org/ja/attending/travel-guide/\" target=\"_blank\">FOSS4G 旅行ガイド</a>",
+          "en": "<b>Shrine</b><br><br>A shrine standing in the main bailey of Hiroshima Castle. It formerly stood elsewhere in the city, was destroyed in the bombing, and moved to this site in 1956. It draws the largest New Year crowds of any shrine in the Chūgoku region.<br><br>Grounds freely open<br><br>Photo: DXR, \"Torii, Hiroshima Gokoku Shrine 20190417 1.jpg\", CC BY-SA 4.0 <https://creativecommons.org/licenses/by-sa/4.0>, via Wikimedia Commons (resized)<br><br><a href=\"https://2026.foss4g.org/en/attending/travel-guide/\" target=\"_blank\">FOSS4G travel guide</a>"
+        },
+        "image": [
+          {
+            "src": "https://upload.wikimedia.org/wikipedia/commons/thumb/e/e0/Torii%2C_Hiroshima_Gokoku_Shrine_20190417_1.jpg/1280px-Torii%2C_Hiroshima_Gokoku_Shrine_20190417_1.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail",
+            "caption": "DXR「Torii, Hiroshima Gokoku Shrine 20190417 1.jpg」/ CC BY-SA 4.0 <https://creativecommons.org/licenses/by-sa/4.0> — Wikimedia Commons（表示用に縮小）",
+            "page": "https://commons.wikimedia.org/wiki/File:Torii,_Hiroshima_Gokoku_Shrine_20190417_1.jpg"
+          }
+        ],
+        "icon": "imgs/foss4g2026-spot-shrine.png",
+        "selectedIcon": "imgs/foss4g2026-spot-shrine-selected.png"
+      }
+    },
+    {
+      "type": "Feature",
+      "id": "shukkeien",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          132.4677073,
+          34.4004062
+        ]
+      },
+      "properties": {
+        "name": {
+          "ja": "縮景園",
+          "en": "Shukkei-en Garden"
+        },
+        "address": {
+          "ja": "広島市中区上幟町2-11",
+          "en": "2-11 Kaminobori-chō, Naka-ku, Hiroshima"
+        },
+        "desc": {
+          "ja": "<b>庭園</b><br><br>1620年に広島藩主浅野長晟の別邸の庭として作られた池泉回遊式庭園。名は「景を縮める」意で、中央の濯纓池のまわりに山と渓谷と橋を小さく配する。原爆で壊滅したが復旧され、被爆に耐えた樹木がいまも園内に立つ。<br><br>開園 3/16〜9/15 9:00〜18:00／9/16〜3/15 9:00〜17:00（入園は閉園30分前まで）<br>入園料 一般350円／大学生150円／小・中・高校生無料<br>休園 12月29日〜31日<br>TEL 082-221-3620<br><br>写真: Jakub Hałun「20100722 Hiroshima Shukkeien 4387.jpg」/ CC BY-SA 4.0 <https://creativecommons.org/licenses/by-sa/4.0> — Wikimedia Commons（表示用に縮小）<br><br><a href=\"https://2026.foss4g.org/ja/attending/travel-guide/\" target=\"_blank\">FOSS4G 旅行ガイド</a>",
+          "en": "<b>Garden</b><br><br>A stroll garden around a pond, laid out in 1620 for the villa of Asano Nagaakira, lord of the Hiroshima domain. The name means roughly 'scenery in miniature': hills, ravines and bridges are set in small compass around the central Takuei Pond. Destroyed in the bombing and since restored, it still contains trees that survived the blast.<br><br>Open 9:00–18:00 (16 Mar–15 Sep) or 9:00–17:00 (16 Sep–15 Mar); last entry 30 minutes before closing<br>¥350 general, ¥150 university students, free for school pupils<br>Closed 29–31 December<br>Tel. +81 82-221-3620<br><br>Photo: Jakub Hałun, \"20100722 Hiroshima Shukkeien 4387.jpg\", CC BY-SA 4.0 <https://creativecommons.org/licenses/by-sa/4.0>, via Wikimedia Commons (resized)<br><br><a href=\"https://2026.foss4g.org/en/attending/travel-guide/\" target=\"_blank\">FOSS4G travel guide</a>"
+        },
+        "image": [
+          {
+            "src": "https://upload.wikimedia.org/wikipedia/commons/thumb/3/33/20100722_Hiroshima_Shukkeien_4387.jpg/1280px-20100722_Hiroshima_Shukkeien_4387.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail",
+            "caption": "Jakub Hałun「20100722 Hiroshima Shukkeien 4387.jpg」/ CC BY-SA 4.0 <https://creativecommons.org/licenses/by-sa/4.0> — Wikimedia Commons（表示用に縮小）",
+            "page": "https://commons.wikimedia.org/wiki/File:20100722_Hiroshima_Shukkeien_4387.jpg"
+          }
+        ],
+        "icon": "imgs/foss4g2026-spot-garden.png",
+        "selectedIcon": "imgs/foss4g2026-spot-garden-selected.png"
+      }
+    },
+    {
+      "type": "Feature",
+      "id": "prefectural-art-museum",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          132.4662119,
+          34.3999899
+        ]
+      },
+      "properties": {
+        "name": {
+          "ja": "広島県立美術館",
+          "en": "Hiroshima Prefectural Art Museum"
+        },
+        "address": {
+          "ja": "広島市中区上幟町2-22",
+          "en": "2-22 Kaminobori-chō, Naka-ku, Hiroshima"
+        },
+        "desc": {
+          "ja": "<b>美術館</b><br><br>縮景園に隣接する県立の美術館。広島ゆかりの作家の作品、アジアの工芸、1920〜30年代の美術を柱とする。サルバドール・ダリの大作「ヴィーナスの夢」を所蔵することでも知られる。ロビーや喫茶からは隣の縮景園の庭が見える。<br><br>開館 9:00〜17:00（入場は閉館30分前まで）／休館 月曜・12月25日〜1月1日<br>所蔵作品展 一般510円／大学生310円（特別展は別料金）<br>縮景園との共通券 一般660円／大学生350円<br>TEL 082-221-6246<br><br>写真: Taisyo at Japanese Wikipedia「Hiroshima Prefectural Art Museum.jpg」/ CC BY 3.0 <https://creativecommons.org/licenses/by/3.0> — Wikimedia Commons（表示用に縮小）<br><br><a href=\"https://2026.foss4g.org/ja/attending/travel-guide/\" target=\"_blank\">FOSS4G 旅行ガイド</a>",
+          "en": "<b>Art museum</b><br><br>The prefectural art museum, next door to Shukkei-en. Its collection centres on artists connected with Hiroshima, on Asian crafts, and on art of the 1920s and 1930s, and includes Salvador Dalí's large canvas *Dream of Venus*. The lobby and café look out over the garden next door.<br><br>Open 9:00–17:00, last entry 30 minutes before; closed Mondays and 25 December – 1 January<br>Collection displays ¥510 general, ¥310 university students; special exhibitions priced separately<br>Combined ticket with Shukkei-en ¥660 general, ¥350 university students<br>Tel. +81 82-221-6246<br><br>Photo: Taisyo at Japanese Wikipedia, \"Hiroshima Prefectural Art Museum.jpg\", CC BY 3.0 <https://creativecommons.org/licenses/by/3.0>, via Wikimedia Commons (resized)<br><br><a href=\"https://2026.foss4g.org/en/attending/travel-guide/\" target=\"_blank\">FOSS4G travel guide</a>"
+        },
+        "image": [
+          {
+            "src": "https://upload.wikimedia.org/wikipedia/commons/thumb/2/2b/Hiroshima_Prefectural_Art_Museum.jpg/1280px-Hiroshima_Prefectural_Art_Museum.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail",
+            "caption": "Taisyo at Japanese Wikipedia「Hiroshima Prefectural Art Museum.jpg」/ CC BY 3.0 <https://creativecommons.org/licenses/by/3.0> — Wikimedia Commons（表示用に縮小）",
+            "page": "https://commons.wikimedia.org/wiki/File:Hiroshima_Prefectural_Art_Museum.jpg"
+          }
+        ],
+        "icon": "imgs/foss4g2026-spot-museum.png",
+        "selectedIcon": "imgs/foss4g2026-spot-museum-selected.png"
+      }
+    },
+    {
+      "type": "Feature",
+      "id": "hiroshima-museum-of-art",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          132.4580873,
+          34.3986179
+        ]
+      },
+      "properties": {
+        "name": {
+          "ja": "ひろしま美術館",
+          "en": "Hiroshima Museum of Art"
+        },
+        "address": {
+          "ja": "広島市中区基町3-2 中央公園内",
+          "en": "3-2 Motomachi, Naka-ku, Hiroshima (in Central Park)"
+        },
+        "desc": {
+          "ja": "<b>美術館</b><br><br>1978年に開館した美術館。フランス近代美術のまとまったコレクションで知られ、印象派から20世紀初頭までの作品が円形の展示室に並ぶ。中央公園の緑に囲まれ、広島城からも歩ける。<br><br>開館 9:00〜17:00（入館は16:30まで）<br>休館 月曜（祝日の場合は翌平日、特別展会期中は開館）<br>入館料は展覧会により異なる<br>TEL 082-223-2530<br><br>写真: At by At「Hiroshima Museum of Art 2013-08B.JPG」/ CC BY-SA 3.0 <https://creativecommons.org/licenses/by-sa/3.0> — Wikimedia Commons（表示用に縮小）<br><br><a href=\"https://2026.foss4g.org/ja/attending/travel-guide/\" target=\"_blank\">FOSS4G 旅行ガイド</a>",
+          "en": "<b>Art museum</b><br><br>Opened in 1978. It is known for a substantial collection of modern French painting, from the Impressionists to the early twentieth century, shown in a circular gallery. It stands among the trees of Central Park, within walking distance of Hiroshima Castle.<br><br>Open 9:00–17:00, last entry 16:30<br>Closed Mondays, with exceptions for public holidays and special exhibitions<br>Admission varies by exhibition<br>Tel. +81 82-223-2530<br><br>Photo: At by At, \"Hiroshima Museum of Art 2013-08B.JPG\", CC BY-SA 3.0 <https://creativecommons.org/licenses/by-sa/3.0>, via Wikimedia Commons (resized)<br><br><a href=\"https://2026.foss4g.org/en/attending/travel-guide/\" target=\"_blank\">FOSS4G travel guide</a>"
+        },
+        "image": [
+          {
+            "src": "https://upload.wikimedia.org/wikipedia/commons/thumb/d/dd/Hiroshima_Museum_of_Art_2013-08B.JPG/1280px-Hiroshima_Museum_of_Art_2013-08B.JPG?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail",
+            "caption": "At by At「Hiroshima Museum of Art 2013-08B.JPG」/ CC BY-SA 3.0 <https://creativecommons.org/licenses/by-sa/3.0> — Wikimedia Commons（表示用に縮小）",
+            "page": "https://commons.wikimedia.org/wiki/File:Hiroshima_Museum_of_Art_2013-08B.JPG"
+          }
+        ],
+        "icon": "imgs/foss4g2026-spot-museum.png",
+        "selectedIcon": "imgs/foss4g2026-spot-museum-selected.png"
+      }
+    },
+    {
+      "type": "Feature",
+      "id": "former-bank-of-japan",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          132.4566355,
+          34.3915454
+        ]
+      },
+      "properties": {
+        "name": {
+          "ja": "旧日本銀行広島支店",
+          "en": "Former Bank of Japan Hiroshima Branch"
+        },
+        "address": {
+          "ja": "広島市中区袋町5-21",
+          "en": "5-21 Fukuro-machi, Naka-ku, Hiroshima"
+        },
+        "desc": {
+          "ja": "<b>被爆建物</b><br><br>1936年竣工の鉄筋コンクリート造の銀行建築。爆心地から約380mで被爆し、閉じていたよろい戸のおかげで1・2階の被害は比較的軽く（窓を開けていた3階は全焼し、館内にいた20人が亡くなった）、2日後の8月8日には業務を再開し、焼けた他行の分もまとめて払い戻しに応じる「自由支払い」の窓口になった。被爆建物として保存され、現在は展示や催しに使われている。<br><br>開館 10:00〜17:00（地下1階展示室は10:30〜16:30）<br>休館 12月29日〜1月3日（地下1階展示室は月曜休室）<br><br>写真: そらみみ「Hiroshima Branch of Bank of Japan 20170310.jpg」/ CC BY-SA 4.0 <https://creativecommons.org/licenses/by-sa/4.0> — Wikimedia Commons（表示用に縮小）<br><br><a href=\"https://2026.foss4g.org/ja/attending/travel-guide/\" target=\"_blank\">FOSS4G 旅行ガイド</a>",
+          "en": "<b>Atomic-bombed building</b><br><br>A reinforced-concrete bank building completed in 1936, about 380 m from the hypocentre. Because its shutters were closed, damage on the first two floors was comparatively light — the third floor, where windows had been left open, burned out and twenty people in the building were killed — and it reopened on 8 August, two days after the bombing, and served as the counter for the emergency arrangement under which customers of the burnt-out banks could withdraw money here. It is preserved as an atomic-bombed building and is now used for exhibitions and events.<br><br>Open 10:00–17:00; the basement exhibition room 10:30–16:30<br>Closed 29 December – 3 January; the basement room also closes on Mondays<br><br>Photo: そらみみ, \"Hiroshima Branch of Bank of Japan 20170310.jpg\", CC BY-SA 4.0 <https://creativecommons.org/licenses/by-sa/4.0>, via Wikimedia Commons (resized)<br><br><a href=\"https://2026.foss4g.org/en/attending/travel-guide/\" target=\"_blank\">FOSS4G travel guide</a>"
+        },
+        "image": [
+          {
+            "src": "https://upload.wikimedia.org/wikipedia/commons/thumb/b/be/Hiroshima_Branch_of_Bank_of_Japan_20170310.jpg/1280px-Hiroshima_Branch_of_Bank_of_Japan_20170310.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail",
+            "caption": "そらみみ「Hiroshima Branch of Bank of Japan 20170310.jpg」/ CC BY-SA 4.0 <https://creativecommons.org/licenses/by-sa/4.0> — Wikimedia Commons（表示用に縮小）",
+            "page": "https://commons.wikimedia.org/wiki/File:Hiroshima_Branch_of_Bank_of_Japan_20170310.jpg"
+          }
+        ],
+        "icon": "imgs/foss4g2026-spot-heritage.png",
+        "selectedIcon": "imgs/foss4g2026-spot-heritage-selected.png"
+      }
+    },
+    {
+      "type": "Feature",
+      "id": "fukuromachi-peace-museum",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          132.4582518,
+          34.3915462
+        ]
+      },
+      "properties": {
+        "name": {
+          "ja": "袋町小学校平和資料館",
+          "en": "Fukuromachi Elementary School Peace Museum"
+        },
+        "address": {
+          "ja": "広島市中区袋町6-36",
+          "en": "6-36 Fukuro-machi, Naka-ku, Hiroshima"
+        },
+        "desc": {
+          "ja": "<b>被爆建物・資料館</b><br><br>爆心地から約460mの小学校に残る、被爆した西校舎の一部を資料館としたもの。被爆直後この校舎は救護所となり、安否を尋ねる伝言が階段室の壁に書き残された。その壁が1999年の工事中に見つかり、現在も当時のまま見ることができる。<br><br>入館無料／開館 9:00〜17:00<br>休館 12月28日〜1月4日／TEL 082-541-5345<br><br>写真: Kiyokun at English Wikipedia / Public domain — Wikimedia Commons<br><br><a href=\"https://2026.foss4g.org/ja/attending/travel-guide/\" target=\"_blank\">FOSS4G 旅行ガイド</a>",
+          "en": "<b>Atomic-bombed building and museum</b><br><br>Part of the surviving west wing of an elementary school some 460 m from the hypocentre, kept as a museum. In the days after the bombing the building served as a relief station, and messages asking after the missing were written on the walls of the stairwell. They were found again during building work in 1999 and can still be seen where they were written.<br><br>Admission free; open 9:00–17:00<br>Closed 28 December – 4 January. Tel. +81 82-541-5345<br><br>Photo: Kiyokun at English Wikipedia / Public domain — Wikimedia Commons<br><br><a href=\"https://2026.foss4g.org/en/attending/travel-guide/\" target=\"_blank\">FOSS4G travel guide</a>"
+        },
+        "image": [
+          {
+            "src": "https://upload.wikimedia.org/wikipedia/commons/thumb/c/ce/Fukuromachi_Elementary_School_Peace_Museum01.JPG/1280px-Fukuromachi_Elementary_School_Peace_Museum01.JPG?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail",
+            "caption": "Kiyokun at English Wikipedia / Public domain — Wikimedia Commons",
+            "page": "https://commons.wikimedia.org/wiki/File:Fukuromachi_Elementary_School_Peace_Museum01.JPG"
+          }
+        ],
+        "icon": "imgs/foss4g2026-spot-museum.png",
+        "selectedIcon": "imgs/foss4g2026-spot-museum-selected.png"
+      }
+    },
+    {
+      "type": "Feature",
+      "id": "rai-sanyo-museum",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          132.4572791,
+          34.3913951
+        ]
+      },
+      "properties": {
+        "name": {
+          "ja": "頼山陽史跡資料館",
+          "en": "Rai Sanyo Museum"
+        },
+        "address": {
+          "ja": "広島市中区袋町5-15",
+          "en": "5-15 Fukuro-machi, Naka-ku, Hiroshima"
+        },
+        "desc": {
+          "ja": "<b>資料館・史跡</b><br><br>『日本外史』を著した江戸後期の歴史家・頼山陽が、脱藩の罰として幽閉された居室が残る一角。国史跡「頼山陽居室」に指定されている。庭を備えた落ち着いた敷地で、頼家に伝わった書画や文書を展示する。繁華街のすぐ裏手にあり、袋町の被爆建物群とあわせて歩ける。<br><br>開館 9:30〜17:00（入館は16:30まで）／休館 月曜（祝日は開館し翌平日休）<br>特集展 一般220円／大学生170円／小・中・高校生無料（企画展・特別展は一般300円）<br>TEL 082-298-5051（広島県立歴史博物館の分館）<br><br>写真: Taisyo「Rai Sanyo Shiseki Museum 01.jpg」/ CC BY 3.0 <https://creativecommons.org/licenses/by/3.0> — Wikimedia Commons（表示用に縮小）<br><br><a href=\"https://2026.foss4g.org/ja/attending/travel-guide/\" target=\"_blank\">FOSS4G 旅行ガイド</a>",
+          "en": "<b>Museum and historic site</b><br><br>The site preserves the room in which Rai San'yō, the late-Edo historian who wrote the *Nihon Gaishi*, was confined as punishment for leaving his domain; it is a designated National Historic Site. The quiet walled grounds include a garden, and the museum shows calligraphy, painting and documents handed down in the Rai family. It lies just behind the shopping streets and can be combined with the atomic-bombed buildings of Fukuro-machi.<br><br>Open 9:30–17:00, last entry 16:30; closed Mondays, or the next weekday when a Monday is a holiday<br>Feature displays ¥220 general, ¥170 university students, free for school pupils; ¥300 for special exhibitions<br>Tel. +81 82-298-5051; a branch of the Hiroshima Prefectural Museum of History<br><br>Photo: Taisyo, \"Rai Sanyo Shiseki Museum 01.jpg\", CC BY 3.0 <https://creativecommons.org/licenses/by/3.0>, via Wikimedia Commons (resized)<br><br><a href=\"https://2026.foss4g.org/en/attending/travel-guide/\" target=\"_blank\">FOSS4G travel guide</a>"
+        },
+        "image": [
+          {
+            "src": "https://upload.wikimedia.org/wikipedia/commons/thumb/f/f5/Rai_Sanyo_Shiseki_Museum_01.jpg/1280px-Rai_Sanyo_Shiseki_Museum_01.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail",
+            "caption": "Taisyo「Rai Sanyo Shiseki Museum 01.jpg」/ CC BY 3.0 <https://creativecommons.org/licenses/by/3.0> — Wikimedia Commons（表示用に縮小）",
+            "page": "https://commons.wikimedia.org/wiki/File:Rai_Sanyo_Shiseki_Museum_01.jpg"
+          }
+        ],
+        "icon": "imgs/foss4g2026-spot-museum.png",
+        "selectedIcon": "imgs/foss4g2026-spot-museum-selected.png"
+      }
+    },
+    {
+      "type": "Feature",
+      "id": "hiroshima-andersen",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          132.4583061,
+          34.39298
+        ]
+      },
+      "properties": {
+        "name": {
+          "ja": "広島アンデルセン",
+          "en": "Hiroshima Andersen"
+        },
+        "address": {
+          "ja": "広島市中区本通7-1",
+          "en": "7-1 Hondōri, Naka-ku, Hiroshima"
+        },
+        "desc": {
+          "ja": "<b>被爆建物・ベーカリー</b><br><br>本通商店街に面したベーカリーとレストラン。もとは1925年に三井銀行広島支店として建てられ、のちに帝国銀行広島支店となった建物で、爆心地から約360mで被爆しながら躯体が残った。2020年の建て替えでは被爆した外壁の一部が切り取られ、新しい建物の外壁にはめ込まれている。デンマーク風のパンで知られる。<br><br>ベーカリー、デリカテッセン、レストランなど施設ごとに営業時間が異なる<br><br>写真: Taisyo「Hiroshima Andersen 20200803-1.JPG」/ CC BY 3.0 <https://creativecommons.org/licenses/by/3.0> — Wikimedia Commons（表示用に縮小）<br><br><a href=\"https://2026.foss4g.org/ja/attending/travel-guide/\" target=\"_blank\">FOSS4G 旅行ガイド</a>",
+          "en": "<b>Atomic-bombed building and bakery</b><br><br>A bakery and restaurant on the Hondōri shopping street. The building went up in 1925 as the Hiroshima branch of the Mitsui Bank and later became the Imperial Bank branch; it stood about 360 m from the hypocentre and its structure survived the blast. When it was rebuilt in 2020, a section of the bombed outer wall was cut out and set into the wall of the new building. The shop is known for its Danish-style bread.<br><br>Opening hours differ between the bakery, the delicatessen and the restaurants<br><br>Photo: Taisyo, \"Hiroshima Andersen 20200803-1.JPG\", CC BY 3.0 <https://creativecommons.org/licenses/by/3.0>, via Wikimedia Commons (resized)<br><br><a href=\"https://2026.foss4g.org/en/attending/travel-guide/\" target=\"_blank\">FOSS4G travel guide</a>"
+        },
+        "image": [
+          {
+            "src": "https://upload.wikimedia.org/wikipedia/commons/thumb/5/5f/Hiroshima_Andersen_20200803-1.JPG/1280px-Hiroshima_Andersen_20200803-1.JPG?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail",
+            "caption": "Taisyo「Hiroshima Andersen 20200803-1.JPG」/ CC BY 3.0 <https://creativecommons.org/licenses/by/3.0> — Wikimedia Commons（表示用に縮小）",
+            "page": "https://commons.wikimedia.org/wiki/File:Hiroshima_Andersen_20200803-1.JPG"
+          }
+        ],
+        "icon": "imgs/foss4g2026-spot-food.png",
+        "selectedIcon": "imgs/foss4g2026-spot-food-selected.png"
+      }
+    },
+    {
+      "type": "Feature",
+      "id": "okonomimura",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          132.461894,
+          34.3912894
+        ]
+      },
+      "properties": {
+        "name": {
+          "ja": "お好み村",
+          "en": "Okonomi-mura"
+        },
+        "address": {
+          "ja": "広島市中区新天地5-13",
+          "en": "5-13 Shintenchi, Naka-ku, Hiroshima"
+        },
+        "desc": {
+          "ja": "<b>飲食</b><br><br>ビルの2〜4階がまるごとお好み焼き屋で埋まっている。戦後の焼け跡に出た屋台がまとまって始まり、いまも二十数軒が並ぶ。広島のお好み焼きは生地と具を混ぜず、キャベツを高く盛って蒸し焼きにし、麺を挟むのが基本形。<br><br>店ごとに営業時間が異なる<br><br>写真: そらみみ「Okonomimura Building at night.jpg」/ CC BY-SA 4.0 <https://creativecommons.org/licenses/by-sa/4.0> — Wikimedia Commons（表示用に縮小）<br><br><a href=\"https://2026.foss4g.org/ja/attending/travel-guide/\" target=\"_blank\">FOSS4G 旅行ガイド</a>",
+          "en": "<b>Food</b><br><br>Three floors of a building given over entirely to okonomiyaki restaurants. It began as a cluster of post-war street stalls and still holds more than twenty shops. Hiroshima okonomiyaki is layered rather than mixed: a thin crêpe, a mound of cabbage steamed under its own weight, and a layer of noodles.<br><br>Opening hours differ from shop to shop<br><br>Photo: そらみみ, \"Okonomimura Building at night.jpg\", CC BY-SA 4.0 <https://creativecommons.org/licenses/by-sa/4.0>, via Wikimedia Commons (resized)<br><br><a href=\"https://2026.foss4g.org/en/attending/travel-guide/\" target=\"_blank\">FOSS4G travel guide</a>"
+        },
+        "image": [
+          {
+            "src": "https://upload.wikimedia.org/wikipedia/commons/thumb/2/24/Okonomimura_Building_at_night.jpg/1280px-Okonomimura_Building_at_night.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail",
+            "caption": "そらみみ「Okonomimura Building at night.jpg」/ CC BY-SA 4.0 <https://creativecommons.org/licenses/by-sa/4.0> — Wikimedia Commons（表示用に縮小）",
+            "page": "https://commons.wikimedia.org/wiki/File:Okonomimura_Building_at_night.jpg"
+          }
+        ],
+        "icon": "imgs/foss4g2026-spot-food.png",
+        "selectedIcon": "imgs/foss4g2026-spot-food-selected.png"
+      }
+    },
+    {
+      "type": "Feature",
+      "id": "hondori",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          132.4578108,
+          34.3936683
+        ]
+      },
+      "properties": {
+        "name": {
+          "ja": "本通商店街",
+          "en": "Hondōri Shopping Street"
+        },
+        "address": {
+          "ja": "広島市中区本通",
+          "en": "Hondōri, Naka-ku, Hiroshima"
+        },
+        "desc": {
+          "ja": "<b>商店街</b><br><br>紙屋町から立町まで約580m続くアーケード商店街。江戸期の西国街道の道筋にあたり、被爆後の復興のなかで広島最大の買い物通りになった。平和記念公園から歩いてすぐで、飲食店や土産物店も多い。<br><br>店ごとに営業時間が異なる<br><br>写真: Taisyo「広島本通商店街01.JPG」/ CC BY 3.0 <https://creativecommons.org/licenses/by/3.0> — Wikimedia Commons（表示用に縮小）<br><br><a href=\"https://2026.foss4g.org/ja/attending/travel-guide/\" target=\"_blank\">FOSS4G 旅行ガイド</a>",
+          "en": "<b>Shopping street</b><br><br>A covered shopping arcade running some 580 m from Kamiya-chō to Tate-machi. It follows the line of the Edo-period Saigoku highway and grew into the city's principal shopping street during the post-war rebuilding. It is a short walk from Peace Memorial Park and has plenty of places to eat and to buy souvenirs.<br><br>Opening hours differ from shop to shop<br><br>Photo: Taisyo, \"広島本通商店街01.JPG\", CC BY 3.0 <https://creativecommons.org/licenses/by/3.0>, via Wikimedia Commons (resized)<br><br><a href=\"https://2026.foss4g.org/en/attending/travel-guide/\" target=\"_blank\">FOSS4G travel guide</a>"
+        },
+        "image": [
+          {
+            "src": "https://upload.wikimedia.org/wikipedia/commons/thumb/9/96/%E5%BA%83%E5%B3%B6%E6%9C%AC%E9%80%9A%E5%95%86%E5%BA%97%E8%A1%9701.JPG/1280px-%E5%BA%83%E5%B3%B6%E6%9C%AC%E9%80%9A%E5%95%86%E5%BA%97%E8%A1%9701.JPG?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail",
+            "caption": "Taisyo「広島本通商店街01.JPG」/ CC BY 3.0 <https://creativecommons.org/licenses/by/3.0> — Wikimedia Commons（表示用に縮小）",
+            "page": "https://commons.wikimedia.org/wiki/File:%E5%BA%83%E5%B3%B6%E6%9C%AC%E9%80%9A%E5%95%86%E5%BA%97%E8%A1%9701.JPG"
+          }
+        ],
+        "icon": "imgs/foss4g2026-spot-food.png",
+        "selectedIcon": "imgs/foss4g2026-spot-food-selected.png"
+      }
+    },
+    {
+      "type": "Feature",
+      "id": "miyajima-ferry-terminal",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          132.3222525,
+          34.3020991
+        ]
+      },
+      "properties": {
+        "name": {
+          "ja": "宮島桟橋",
+          "en": "Miyajima Ferry Terminal"
+        },
+        "address": {
+          "ja": "廿日市市宮島町1162-18",
+          "en": "1162-18 Miyajima-chō, Hatsukaichi"
+        },
+        "desc": {
+          "ja": "<b>港・玄関口</b><br><br>宮島口からのフェリーが着く島の玄関。JR西日本宮島フェリーと宮島松大汽船の2社が同じ航路を運航し、所要は約10分。ターミナルには観光案内所とコインロッカーがある。桟橋から厳島神社までは海沿いに徒歩約12分で、途中から鹿を見かける。<br><br>宮島訪問税100円が船の運賃に上乗せされます（年間500円の一括納付もありますが、初回訪問の前月10日までの申告が要ります）。<br><br>写真: Naokijp「Miyajima Ferry Terminal 001.jpg」/ CC BY-SA 4.0 <https://creativecommons.org/licenses/by-sa/4.0> — Wikimedia Commons（表示用に縮小）<br><br><a href=\"https://2026.foss4g.org/ja/attending/travel-guide/\" target=\"_blank\">FOSS4G 旅行ガイド</a>",
+          "en": "<b>Pier and gateway</b><br><br>The island's gateway, where the ferries from Miyajimaguchi arrive. Two operators, JR West Miyajima Ferry and Miyajima Matsudai Kisen, run the same ten-minute crossing. The terminal has a tourist information desk and coin lockers. It is about a twelve-minute walk along the shore to Itsukushima Shrine, and the deer appear well before you get there.<br><br>A Miyajima visitor tax of ¥100 is added to the ferry fare. An annual ¥500 payment also exists, but must be filed in advance and is not a same-day option.<br><br>Photo: Naokijp, \"Miyajima Ferry Terminal 001.jpg\", CC BY-SA 4.0 <https://creativecommons.org/licenses/by-sa/4.0>, via Wikimedia Commons (resized)<br><br><a href=\"https://2026.foss4g.org/en/attending/travel-guide/\" target=\"_blank\">FOSS4G travel guide</a>"
+        },
+        "image": [
+          {
+            "src": "https://upload.wikimedia.org/wikipedia/commons/thumb/3/39/Miyajima_Ferry_Terminal_001.jpg/1280px-Miyajima_Ferry_Terminal_001.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail",
+            "caption": "Naokijp「Miyajima Ferry Terminal 001.jpg」/ CC BY-SA 4.0 <https://creativecommons.org/licenses/by-sa/4.0> — Wikimedia Commons（表示用に縮小）",
+            "page": "https://commons.wikimedia.org/wiki/File:Miyajima_Ferry_Terminal_001.jpg"
+          }
+        ],
+        "icon": "imgs/foss4g2026-spot-transport.png",
+        "selectedIcon": "imgs/foss4g2026-spot-transport-selected.png"
+      }
+    },
+    {
+      "type": "Feature",
+      "id": "itsukushima-shrine",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          132.3193001,
+          34.2965382
+        ]
+      },
+      "properties": {
+        "name": {
+          "ja": "厳島神社",
+          "en": "Itsukushima Shrine"
+        },
+        "address": {
+          "ja": "廿日市市宮島町1-1",
+          "en": "1-1 Miyajima-chō, Hatsukaichi"
+        },
+        "desc": {
+          "ja": "<b>世界遺産・神社</b><br><br>海上に社殿を並べた神社。創建は6世紀末と伝えられ、現在に近い姿は12世紀に平清盛が整えた。潮が満ちると回廊と大鳥居が海に浮かんで見え、引くと鳥居の根元まで歩いて近づける。社殿のうち6棟が国宝、大鳥居を含む14棟が重要文化財で、1996年に世界文化遺産に登録された。<br><br>拝観 3月1日〜10月14日 6:30〜18:00・年中無休<br>昇殿料 大人300円／高校生200円／中・小学生100円<br>東廻廊は2026年12月まで構造補強工事中<br>潮の干満で見え方が変わるため、潮汐表の確認を勧める<br>宮島訪問税100円が船の運賃に上乗せされます（年間500円の一括納付もありますが、初回訪問の前月10日までの申告が要ります）。<br><br>写真: Balon Greyjoy / CC0 — Wikimedia Commons<br><br><a href=\"https://2026.foss4g.org/ja/attending/travel-guide/\" target=\"_blank\">FOSS4G 旅行ガイド</a>",
+          "en": "<b>UNESCO World Heritage Site and shrine</b><br><br>A shrine built out over the sea. Its founding is placed at the end of the sixth century, and the arrangement seen today was created in the twelfth by Taira no Kiyomori. At high tide the corridors and the great torii appear to float; at low tide one can walk out to the foot of the gate. Six of the shrine buildings are National Treasures and fourteen more, the great torii among them, are Important Cultural Properties; the site was inscribed on the World Heritage List in 1996.<br><br>Open 6:30–18:00 from 1 March to 14 October; no closing days<br>¥300 adults, ¥200 high-school students, ¥100 school pupils<br>The East Corridor is under structural strengthening work until December 2026<br>The view changes entirely with the tide; checking a tide table is worthwhile<br>A Miyajima visitor tax of ¥100 is added to the ferry fare. An annual ¥500 payment also exists, but must be filed in advance and is not a same-day option.<br><br>Photo: Balon Greyjoy / CC0 — Wikimedia Commons<br><br><a href=\"https://2026.foss4g.org/en/attending/travel-guide/\" target=\"_blank\">FOSS4G travel guide</a>"
+        },
+        "image": [
+          {
+            "src": "https://upload.wikimedia.org/wikipedia/commons/thumb/d/db/20181111_Itsukushima_Shrine_torii-2.jpg/1280px-20181111_Itsukushima_Shrine_torii-2.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail",
+            "caption": "Balon Greyjoy / CC0 — Wikimedia Commons",
+            "page": "https://commons.wikimedia.org/wiki/File:20181111_Itsukushima_Shrine_torii-2.jpg"
+          }
+        ],
+        "icon": "imgs/foss4g2026-spot-shrine.png",
+        "selectedIcon": "imgs/foss4g2026-spot-shrine-selected.png"
+      }
+    },
+    {
+      "type": "Feature",
+      "id": "senjokaku",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          132.3202692,
+          34.2973039
+        ]
+      },
+      "properties": {
+        "name": {
+          "ja": "豊国神社（千畳閣）",
+          "en": "Toyokuni Shrine (Senjōkaku)"
+        },
+        "address": {
+          "ja": "廿日市市宮島町1-1",
+          "en": "1-1 Miyajima-chō, Hatsukaichi"
+        },
+        "desc": {
+          "ja": "<b>重要文化財</b><br><br>1587年に豊臣秀吉が経堂として建てさせた大規模な木造建築。秀吉の死で工事が止まり、天井も壁も入らないまま今日に至る。千畳閣の名は畳千枚分の広さという見立てによるもので、実際に敷ける畳は857枚分とされる。柱の間から瀬戸内海が見渡せる（隣の五重塔は2026年12月まで工事中）。<br><br>昇殿料 大人100円／中・小学生50円<br>通年 8:30〜16:30<br>宮島訪問税100円が船の運賃に上乗せされます（年間500円の一括納付もありますが、初回訪問の前月10日までの申告が要ります）。<br><br>写真: Taisyo「Senjokaku 2011.JPG」/ CC BY 3.0 <https://creativecommons.org/licenses/by/3.0> — Wikimedia Commons（表示用に縮小）<br><br><a href=\"https://2026.foss4g.org/ja/attending/travel-guide/\" target=\"_blank\">FOSS4G 旅行ガイド</a>",
+          "en": "<b>Important Cultural Property</b><br><br>A large timber hall commissioned in 1587 by Toyotomi Hideyoshi as a sutra hall. Work stopped when he died, and it has stood ever since without ceiling or walls. Its name, Senjōkaku, refers to the notion that a thousand tatami mats would be needed to floor it. Between the pillars there are views over the Inland Sea; the five-storied pagoda next door is under restoration until December 2026.<br><br>¥100 for adults, ¥50 for school pupils<br>Open 8:30–16:30 all year<br>A Miyajima visitor tax of ¥100 is added to the ferry fare. An annual ¥500 payment also exists, but must be filed in advance and is not a same-day option.<br><br>Photo: Taisyo, \"Senjokaku 2011.JPG\", CC BY 3.0 <https://creativecommons.org/licenses/by/3.0>, via Wikimedia Commons (resized)<br><br><a href=\"https://2026.foss4g.org/en/attending/travel-guide/\" target=\"_blank\">FOSS4G travel guide</a>"
+        },
+        "image": [
+          {
+            "src": "https://upload.wikimedia.org/wikipedia/commons/thumb/4/4c/Senjokaku_2011.JPG/1280px-Senjokaku_2011.JPG?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail",
+            "caption": "Taisyo「Senjokaku 2011.JPG」/ CC BY 3.0 <https://creativecommons.org/licenses/by/3.0> — Wikimedia Commons（表示用に縮小）",
+            "page": "https://commons.wikimedia.org/wiki/File:Senjokaku_2011.JPG"
+          }
+        ],
+        "icon": "imgs/foss4g2026-spot-shrine.png",
+        "selectedIcon": "imgs/foss4g2026-spot-heritage-selected.png"
+      }
+    },
+    {
+      "type": "Feature",
+      "id": "five-storied-pagoda",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          132.3207385,
+          34.2971947
+        ]
+      },
+      "properties": {
+        "name": {
+          "ja": "五重塔",
+          "en": "Five-Storied Pagoda"
+        },
+        "address": {
+          "ja": "廿日市市宮島町1-1",
+          "en": "1-1 Miyajima-chō, Hatsukaichi"
+        },
+        "desc": {
+          "ja": "<b>重要文化財</b><br><br>千畳閣の隣に建つ高さ27.6mの塔。1407年の建立と伝えられ、和様と唐様を混ぜた造りとされる。朱塗りの姿は本来、海側からも厳島神社の回廊からもよく見える。ただし修復工事のため素屋根と仮設足場に覆われており、仮設足場の解体は令和8年（2026年）12月予定とされる。内部は非公開。<br><br>2026年12月まで修復工事中。会期中は素屋根に覆われ外観を見られない<br>宮島訪問税100円が船の運賃に上乗せされます（年間500円の一括納付もありますが、初回訪問の前月10日までの申告が要ります）。<br><br>写真: NY066「Miyajima Five story pagoda.JPG」/ CC BY-SA 3.0 <https://creativecommons.org/licenses/by-sa/3.0> — Wikimedia Commons（表示用に縮小）<br><br><a href=\"https://2026.foss4g.org/ja/attending/travel-guide/\" target=\"_blank\">FOSS4G 旅行ガイド</a>",
+          "en": "<b>Important Cultural Property</b><br><br>A pagoda 27.6 m high standing beside Senjōkaku. It is said to date from 1407 and mixes Japanese and Chinese building manners. Its vermilion form is normally conspicuous from the water and from the shrine corridors. It is at present under restoration, wrapped in a temporary roof and scaffolding which are scheduled to come down in December 2026. The interior is not open.<br><br>Under restoration until December 2026; during the conference it is hidden by a temporary roof<br>A Miyajima visitor tax of ¥100 is added to the ferry fare. An annual ¥500 payment also exists, but must be filed in advance and is not a same-day option.<br><br>Photo: NY066, \"Miyajima Five story pagoda.JPG\", CC BY-SA 3.0 <https://creativecommons.org/licenses/by-sa/3.0>, via Wikimedia Commons (resized)<br><br><a href=\"https://2026.foss4g.org/en/attending/travel-guide/\" target=\"_blank\">FOSS4G travel guide</a>"
+        },
+        "image": [
+          {
+            "src": "https://upload.wikimedia.org/wikipedia/commons/c/cc/Miyajima_Five_story_pagoda.JPG?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail_unscaled",
+            "caption": "NY066「Miyajima Five story pagoda.JPG」/ CC BY-SA 3.0 <https://creativecommons.org/licenses/by-sa/3.0> — Wikimedia Commons（表示用に縮小）",
+            "page": "https://commons.wikimedia.org/wiki/File:Miyajima_Five_story_pagoda.JPG"
+          }
+        ],
+        "icon": "imgs/foss4g2026-spot-temple.png",
+        "selectedIcon": "imgs/foss4g2026-spot-temple-selected.png"
+      }
+    },
+    {
+      "type": "Feature",
+      "id": "daiganji",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          132.318232,
+          34.2954699
+        ]
+      },
+      "properties": {
+        "name": {
+          "ja": "大願寺",
+          "en": "Daigan-ji Temple"
+        },
+        "address": {
+          "ja": "廿日市市宮島町3",
+          "en": "3 Miyajima-chō, Hatsukaichi"
+        },
+        "desc": {
+          "ja": "<b>寺院</b><br><br>厳島神社の出口のすぐ先にある真言宗の寺。明治の神仏分離まで厳島神社の修理造営を担っていた。本堂には神仏分離の際に神社から移された仏像が納められている。境内の九本松は伊藤博文の手植えと伝わる。<br><br>参拝 8:30〜17:00／拝観無料<br>宮島訪問税100円が船の運賃に上乗せされます（年間500円の一括納付もありますが、初回訪問の前月10日までの申告が要ります）。<br><br>写真: Daderot / CC0 — Wikimedia Commons<br><br><a href=\"https://2026.foss4g.org/ja/attending/travel-guide/\" target=\"_blank\">FOSS4G 旅行ガイド</a>",
+          "en": "<b>Temple</b><br><br>A Shingon temple just beyond the exit of Itsukushima Shrine. Until Buddhism and Shinto were separated by law in the Meiji period, it was responsible for the shrine's repair and building work. Buddhist images moved out of the shrine at that time are kept in its main hall. The nine-trunked pine in the grounds is said to have been planted by Itō Hirobumi.<br><br>Open 8:30–17:00; no admission charge<br>A Miyajima visitor tax of ¥100 is added to the ferry fare. An annual ¥500 payment also exists, but must be filed in advance and is not a same-day option.<br><br>Photo: Daderot / CC0 — Wikimedia Commons<br><br><a href=\"https://2026.foss4g.org/en/attending/travel-guide/\" target=\"_blank\">FOSS4G travel guide</a>"
+        },
+        "image": [
+          {
+            "src": "https://upload.wikimedia.org/wikipedia/commons/thumb/a/a2/Daiganji_Temple_%28Miyajima%29_-_DSC02246.JPG/1280px-Daiganji_Temple_%28Miyajima%29_-_DSC02246.JPG?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail",
+            "caption": "Daderot / CC0 — Wikimedia Commons",
+            "page": "https://commons.wikimedia.org/wiki/File:Daiganji_Temple_(Miyajima)_-_DSC02246.JPG"
+          }
+        ],
+        "icon": "imgs/foss4g2026-spot-temple.png",
+        "selectedIcon": "imgs/foss4g2026-spot-temple-selected.png"
+      }
+    },
+    {
+      "type": "Feature",
+      "id": "kiyomori-shrine",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          132.3164232,
+          34.2963772
+        ]
+      },
+      "properties": {
+        "name": {
+          "ja": "清盛神社",
+          "en": "Kiyomori Shrine"
+        },
+        "address": {
+          "ja": "廿日市市宮島町",
+          "en": "Miyajima-chō, Hatsukaichi"
+        },
+        "desc": {
+          "ja": "<b>神社</b><br><br>厳島神社を今の姿に整えた平清盛を祀る神社。西の砂嘴の先端にあり、参道からやや外れるため人が少ない。海に向かって開けた場所で、対岸と大鳥居を横から眺められる。<br><br>境内自由<br>宮島訪問税100円が船の運賃に上乗せされます（年間500円の一括納付もありますが、初回訪問の前月10日までの申告が要ります）。<br><br>写真: Daderot / CC0 — Wikimedia Commons<br><br><a href=\"https://2026.foss4g.org/ja/attending/travel-guide/\" target=\"_blank\">FOSS4G 旅行ガイド</a>",
+          "en": "<b>Shrine</b><br><br>A shrine to Taira no Kiyomori, who gave Itsukushima Shrine the form it has today. It stands at the tip of the western spit, off the main path, and is usually quiet. The open ground faces the sea, giving a side-on view of the great torii and the mainland beyond.<br><br>Grounds freely open<br>A Miyajima visitor tax of ¥100 is added to the ferry fare. An annual ¥500 payment also exists, but must be filed in advance and is not a same-day option.<br><br>Photo: Daderot / CC0 — Wikimedia Commons<br><br><a href=\"https://2026.foss4g.org/en/attending/travel-guide/\" target=\"_blank\">FOSS4G travel guide</a>"
+        },
+        "image": [
+          {
+            "src": "https://upload.wikimedia.org/wikipedia/commons/thumb/c/cd/Kiyomori_Shrine%2C_Miyajima_-_DSC02258.JPG/1280px-Kiyomori_Shrine%2C_Miyajima_-_DSC02258.JPG?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail",
+            "caption": "Daderot / CC0 — Wikimedia Commons",
+            "page": "https://commons.wikimedia.org/wiki/File:Kiyomori_Shrine,_Miyajima_-_DSC02258.JPG"
+          }
+        ],
+        "icon": "imgs/foss4g2026-spot-shrine.png",
+        "selectedIcon": "imgs/foss4g2026-spot-shrine-selected.png"
+      }
+    },
+    {
+      "type": "Feature",
+      "id": "tahoto",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          132.3181672,
+          34.29458
+        ]
+      },
+      "properties": {
+        "name": {
+          "ja": "多宝塔",
+          "en": "Tahōtō Pagoda"
+        },
+        "address": {
+          "ja": "廿日市市宮島町",
+          "en": "Miyajima-chō, Hatsukaichi"
+        },
+        "desc": {
+          "ja": "<b>重要文化財</b><br><br>1523年建立と伝えられる高さ15.6mの二層の塔。下層が方形、上層が円形という多宝塔の形式をとる。厳島神社の西の高台に建ち、そこまで登ると社殿と大鳥居、対岸までを俯瞰できる。人通りが少なく静かな場所である。<br><br>外観のみ<br>宮島訪問税100円が船の運賃に上乗せされます（年間500円の一括納付もありますが、初回訪問の前月10日までの申告が要ります）。<br><br>写真: Daderot / CC0 — Wikimedia Commons<br><br><a href=\"https://2026.foss4g.org/ja/attending/travel-guide/\" target=\"_blank\">FOSS4G 旅行ガイド</a>",
+          "en": "<b>Important Cultural Property</b><br><br>A two-storeyed pagoda 15.6 m high, said to date from 1523, built in the tahōtō form with a square lower storey and a round upper one. It stands on the rise west of Itsukushima Shrine, and the climb is rewarded with a view down over the shrine, the great torii and the mainland. Few people come this way and it is quiet.<br><br>Exterior only<br>A Miyajima visitor tax of ¥100 is added to the ferry fare. An annual ¥500 payment also exists, but must be filed in advance and is not a same-day option.<br><br>Photo: Daderot / CC0 — Wikimedia Commons<br><br><a href=\"https://2026.foss4g.org/en/attending/travel-guide/\" target=\"_blank\">FOSS4G travel guide</a>"
+        },
+        "image": [
+          {
+            "src": "https://upload.wikimedia.org/wikipedia/commons/thumb/2/28/Tahoto_Pagoda%2C_Miyajim_-_DSC02454.JPG/1280px-Tahoto_Pagoda%2C_Miyajim_-_DSC02454.JPG?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail",
+            "caption": "Daderot / CC0 — Wikimedia Commons",
+            "page": "https://commons.wikimedia.org/wiki/File:Tahoto_Pagoda,_Miyajim_-_DSC02454.JPG"
+          }
+        ],
+        "icon": "imgs/foss4g2026-spot-temple.png",
+        "selectedIcon": "imgs/foss4g2026-spot-temple-selected.png"
+      }
+    },
+    {
+      "type": "Feature",
+      "id": "daishoin",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          132.3185618,
+          34.2917429
+        ]
+      },
+      "properties": {
+        "name": {
+          "ja": "大聖院",
+          "en": "Daishō-in Temple"
+        },
+        "address": {
+          "ja": "廿日市市宮島町210",
+          "en": "210 Miyajima-chō, Hatsukaichi"
+        },
+        "desc": {
+          "ja": "<b>寺院</b><br><br>弥山の麓に広がる真言宗御室派の寺で、宮島でもっとも古い寺とされる。参道の手すりに並ぶ回転式の経文筒、五百羅漢の石像が並ぶ石段、洞窟の霊場など見どころが多く、山腹に沿って堂が段々に配される。弥山への登山道の一つがここから始まる。<br><br>開門 8:00〜17:00／拝観無料<br>宮島訪問税100円が船の運賃に上乗せされます（年間500円の一括納付もありますが、初回訪問の前月10日までの申告が要ります）。<br><br>写真: Celuici「Staircase with statues, Daishō-in, Miyajima, May 2017.jpg」/ CC BY-SA 3.0 <https://creativecommons.org/licenses/by-sa/3.0> — Wikimedia Commons（表示用に縮小）<br><br><a href=\"https://2026.foss4g.org/ja/attending/travel-guide/\" target=\"_blank\">FOSS4G 旅行ガイド</a>",
+          "en": "<b>Temple</b><br><br>A temple of the Omuro branch of Shingon at the foot of Mount Misen, held to be the oldest on the island. Prayer wheels line the handrail of the approach, stone figures of the five hundred rakan flank the steps, and there is a cave hall lit with lanterns; the halls climb the hillside in tiers. One of the paths up Mount Misen starts here.<br><br>Open 8:00–17:00; no admission charge<br>A Miyajima visitor tax of ¥100 is added to the ferry fare. An annual ¥500 payment also exists, but must be filed in advance and is not a same-day option.<br><br>Photo: Celuici, \"Staircase with statues, Daishō-in, Miyajima, May 2017.jpg\", CC BY-SA 3.0 <https://creativecommons.org/licenses/by-sa/3.0>, via Wikimedia Commons (resized)<br><br><a href=\"https://2026.foss4g.org/en/attending/travel-guide/\" target=\"_blank\">FOSS4G travel guide</a>"
+        },
+        "image": [
+          {
+            "src": "https://upload.wikimedia.org/wikipedia/commons/thumb/6/67/Staircase_with_statues%2C_Daish%C5%8D-in%2C_Miyajima%2C_May_2017.jpg/1280px-Staircase_with_statues%2C_Daish%C5%8D-in%2C_Miyajima%2C_May_2017.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail",
+            "caption": "Celuici「Staircase with statues, Daishō-in, Miyajima, May 2017.jpg」/ CC BY-SA 3.0 <https://creativecommons.org/licenses/by-sa/3.0> — Wikimedia Commons（表示用に縮小）",
+            "page": "https://commons.wikimedia.org/wiki/File:Staircase_with_statues,_Daish%C5%8D-in,_Miyajima,_May_2017.jpg"
+          }
+        ],
+        "icon": "imgs/foss4g2026-spot-temple.png",
+        "selectedIcon": "imgs/foss4g2026-spot-temple-selected.png"
+      }
+    },
+    {
+      "type": "Feature",
+      "id": "momijidani-park",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          132.3250384,
+          34.2938092
+        ]
+      },
+      "properties": {
+        "name": {
+          "ja": "紅葉谷公園",
+          "en": "Momijidani Park"
+        },
+        "address": {
+          "ja": "廿日市市宮島町紅葉谷",
+          "en": "Momijidani, Miyajima-chō, Hatsukaichi"
+        },
+        "desc": {
+          "ja": "<b>公園</b><br><br>厳島神社の裏手の谷に広がる公園で、名のとおり秋の紅葉で知られる。谷川に沿って歩道と石橋が続き、木陰が濃く夏でも涼しい。宮島ロープウエーの紅葉谷駅と、弥山への登山道の一つがこの奥にある。<br><br>入園自由<br>宮島訪問税100円が船の運賃に上乗せされます（年間500円の一括納付もありますが、初回訪問の前月10日までの申告が要ります）。<br><br>写真: Steven Perez「紅葉谷公園 宮島.jpg」/ CC BY-SA 2.0 <https://creativecommons.org/licenses/by-sa/2.0> — Wikimedia Commons（表示用に縮小）<br><br><a href=\"https://2026.foss4g.org/ja/attending/travel-guide/\" target=\"_blank\">FOSS4G 旅行ガイド</a>",
+          "en": "<b>Park</b><br><br>A park in the valley behind Itsukushima Shrine, known, as its name says, for its autumn maples. Paths and stone bridges follow the stream, and the shade is deep enough to stay cool in summer. The Momijidani station of the Miyajima Ropeway and one of the paths up Mount Misen lie at the head of the valley.<br><br>Freely open<br>A Miyajima visitor tax of ¥100 is added to the ferry fare. An annual ¥500 payment also exists, but must be filed in advance and is not a same-day option.<br><br>Photo: Steven Perez, \"紅葉谷公園 宮島.jpg\", CC BY-SA 2.0 <https://creativecommons.org/licenses/by-sa/2.0>, via Wikimedia Commons (resized)<br><br><a href=\"https://2026.foss4g.org/en/attending/travel-guide/\" target=\"_blank\">FOSS4G travel guide</a>"
+        },
+        "image": [
+          {
+            "src": "https://upload.wikimedia.org/wikipedia/commons/thumb/f/f0/%E7%B4%85%E8%91%89%E8%B0%B7%E5%85%AC%E5%9C%92_%E5%AE%AE%E5%B3%B6.jpg/1280px-%E7%B4%85%E8%91%89%E8%B0%B7%E5%85%AC%E5%9C%92_%E5%AE%AE%E5%B3%B6.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail",
+            "caption": "Steven Perez「紅葉谷公園 宮島.jpg」/ CC BY-SA 2.0 <https://creativecommons.org/licenses/by-sa/2.0> — Wikimedia Commons（表示用に縮小）",
+            "page": "https://commons.wikimedia.org/wiki/File:%E7%B4%85%E8%91%89%E8%B0%B7%E5%85%AC%E5%9C%92_%E5%AE%AE%E5%B3%B6.jpg"
+          }
+        ],
+        "icon": "imgs/foss4g2026-spot-garden.png",
+        "selectedIcon": "imgs/foss4g2026-spot-garden-selected.png"
+      }
+    },
+    {
+      "type": "Feature",
+      "id": "miyajima-ropeway",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          132.3267776,
+          34.2932285
+        ]
+      },
+      "properties": {
+        "name": {
+          "ja": "宮島ロープウエー",
+          "en": "Miyajima Ropeway"
+        },
+        "address": {
+          "ja": "廿日市市宮島町紅葉谷公園",
+          "en": "Momijidani Park, Miyajima-chō, Hatsukaichi"
+        },
+        "desc": {
+          "ja": "<b>索道</b><br><br>紅葉谷から弥山の中腹まで、2本の索道を乗り継いで上がる。前半の紅葉谷線は8人乗りの小さなゴンドラ、後半の獅子岩線は35人乗りの大きな箱で、終点の獅子岩駅からは瀬戸内の島々が一望できる。山頂までは駅からさらに徒歩で登る。<br><br>運行 上り 9:00〜16:00／下り最終 16:30<br>運賃 大人 往復2,000円・片道1,100円／小人 往復1,000円・片道550円<br>獅子岩駅から山頂までさらに往復約1時間<br>TEL 0829-44-0316<br><br>写真: Naokijp「Miyajima Ropeway, Momijidani Line 001.jpg」/ CC BY-SA 4.0 <https://creativecommons.org/licenses/by-sa/4.0> — Wikimedia Commons（表示用に縮小）<br><br><a href=\"https://2026.foss4g.org/ja/attending/travel-guide/\" target=\"_blank\">FOSS4G 旅行ガイド</a>",
+          "en": "<b>Ropeway</b><br><br>Two cableways in succession carry visitors from Momijidani to the upper slopes of Mount Misen. The first, the Momijidani line, uses small eight-seat gondolas; the second, the Shishiiwa line, larger 35-seat cars. From Shishiiwa station at the top the islands of the Inland Sea are spread out below. The summit is a further walk from the station.<br><br>Up 9:00–16:00; last car down 16:30<br>Adults ¥2,000 return, ¥1,100 one way; children ¥1,000 return, ¥550 one way<br>Allow about another hour there and back from the station to the summit<br>Tel. +81 829-44-0316<br><br>Photo: Naokijp, \"Miyajima Ropeway, Momijidani Line 001.jpg\", CC BY-SA 4.0 <https://creativecommons.org/licenses/by-sa/4.0>, via Wikimedia Commons (resized)<br><br><a href=\"https://2026.foss4g.org/en/attending/travel-guide/\" target=\"_blank\">FOSS4G travel guide</a>"
+        },
+        "image": [
+          {
+            "src": "https://upload.wikimedia.org/wikipedia/commons/thumb/6/6f/Miyajima_Ropeway%2C_Momijidani_Line_001.jpg/1280px-Miyajima_Ropeway%2C_Momijidani_Line_001.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail",
+            "caption": "Naokijp「Miyajima Ropeway, Momijidani Line 001.jpg」/ CC BY-SA 4.0 <https://creativecommons.org/licenses/by-sa/4.0> — Wikimedia Commons（表示用に縮小）",
+            "page": "https://commons.wikimedia.org/wiki/File:Miyajima_Ropeway,_Momijidani_Line_001.jpg"
+          }
+        ],
+        "icon": "imgs/foss4g2026-spot-transport.png",
+        "selectedIcon": "imgs/foss4g2026-spot-transport-selected.png"
+      }
+    },
+    {
+      "type": "Feature",
+      "id": "mount-misen",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          132.319611,
+          34.279592
+        ]
+      },
+      "properties": {
+        "name": {
+          "ja": "弥山",
+          "en": "Mount Misen"
+        },
+        "address": {
+          "ja": "廿日市市宮島町",
+          "en": "Miyajima-chō, Hatsukaichi"
+        },
+        "desc": {
+          "ja": "<b>山・原始林</b><br><br>標高535mの宮島の主峰。山腹は伐採を免れた原始林で、国の天然記念物に指定されている。山頂には巨岩が重なり、展望台からは瀬戸内海の島々を見渡せる。ロープウエーのほか、紅葉谷・大聖院・大元の3本の登山道がある。<br><br>登山道は3ルート。歩けば片道1.5〜2時間程度<br>山頂近くの不消霊火堂は2026年5月に焼失した<br>宮島訪問税100円が船の運賃に上乗せされます（年間500円の一括納付もありますが、初回訪問の前月10日までの申告が要ります）。<br><br>写真: Daderot / CC0 — Wikimedia Commons<br><br><a href=\"https://2026.foss4g.org/ja/attending/travel-guide/\" target=\"_blank\">FOSS4G 旅行ガイド</a>",
+          "en": "<b>Mountain and primeval forest</b><br><br>The island's principal peak, 535 m high. Its slopes carry primeval forest that escaped felling and are designated a Natural Monument. Great boulders are piled at the summit, and from the observation platform the islands of the Inland Sea stretch away in every direction. Besides the ropeway there are three walking routes up, from Momijidani, Daishō-in and Ōmoto.<br><br>Three paths lead up; on foot allow roughly 1.5–2 hours each way<br>The Kiezu-no-Reikadō hall near the summit burned down in May 2026<br>A Miyajima visitor tax of ¥100 is added to the ferry fare. An annual ¥500 payment also exists, but must be filed in advance and is not a same-day option.<br><br>Photo: Daderot / CC0 — Wikimedia Commons<br><br><a href=\"https://2026.foss4g.org/en/attending/travel-guide/\" target=\"_blank\">FOSS4G travel guide</a>"
+        },
+        "image": [
+          {
+            "src": "https://upload.wikimedia.org/wikipedia/commons/thumb/0/03/Mount_Misen_%28Miyajima%29_-_DSC02043.JPG/1280px-Mount_Misen_%28Miyajima%29_-_DSC02043.JPG?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail",
+            "caption": "Daderot / CC0 — Wikimedia Commons",
+            "page": "https://commons.wikimedia.org/wiki/File:Mount_Misen_(Miyajima)_-_DSC02043.JPG"
+          }
+        ],
+        "icon": "imgs/foss4g2026-spot-scenic.png",
+        "selectedIcon": "imgs/foss4g2026-spot-scenic-selected.png"
+      }
+    },
+    {
+      "type": "Feature",
+      "id": "miyajima-aquarium",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          132.3156513,
+          34.2954755
+        ]
+      },
+      "properties": {
+        "name": {
+          "ja": "宮島水族館",
+          "en": "Miyajima Public Aquarium"
+        },
+        "address": {
+          "ja": "廿日市市宮島町10-3",
+          "en": "10-3 Miyajima-chō, Hatsukaichi"
+        },
+        "desc": {
+          "ja": "<b>水族館</b><br><br>瀬戸内海の生きものを中心に展示する水族館。牡蠣の養殖いかだを再現した水槽や、スナメリ、コツメカワウソ、アシカのライブが見どころ。厳島神社の先、大願寺のさらに西にあり、参道の混雑から離れている。<br><br>開館 9:00〜17:00（最終入館 16:00）<br>2026年12月1日〜2027年3月31日は休館（会期中は開館）<br>入館料 一般（高校生含む）1,420円／中学生710円／小学生710円／幼児400円<br>TEL 0829-44-2010<br>宮島訪問税100円が船の運賃に上乗せされます（年間500円の一括納付もありますが、初回訪問の前月10日までの申告が要ります）。<br><br>写真: Daderot / CC0 — Wikimedia Commons<br><br><a href=\"https://2026.foss4g.org/ja/attending/travel-guide/\" target=\"_blank\">FOSS4G 旅行ガイド</a>",
+          "en": "<b>Aquarium</b><br><br>An aquarium given over mainly to the life of the Inland Sea. Among its displays are a tank reproducing an oyster raft, finless porpoises, small-clawed otters and a sea-lion show. It lies west of Itsukushima Shrine, beyond Daigan-ji, away from the crowds of the main approach.<br><br>Open 9:00–17:00, last entry 16:00<br>Closed 1 December 2026 – 31 March 2027; open during the conference<br>¥1,420 general including high-school students, ¥710 junior-high and primary pupils, ¥400 pre-school<br>Tel. +81 829-44-2010<br>A Miyajima visitor tax of ¥100 is added to the ferry fare. An annual ¥500 payment also exists, but must be filed in advance and is not a same-day option.<br><br>Photo: Daderot / CC0 — Wikimedia Commons<br><br><a href=\"https://2026.foss4g.org/en/attending/travel-guide/\" target=\"_blank\">FOSS4G travel guide</a>"
+        },
+        "image": [
+          {
+            "src": "https://upload.wikimedia.org/wikipedia/commons/thumb/9/91/Miyajima_Public_Aquarium_-_DSC02266.JPG/1280px-Miyajima_Public_Aquarium_-_DSC02266.JPG?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail",
+            "caption": "Daderot / CC0 — Wikimedia Commons",
+            "page": "https://commons.wikimedia.org/wiki/File:Miyajima_Public_Aquarium_-_DSC02266.JPG"
+          }
+        ],
+        "icon": "imgs/foss4g2026-spot-aquarium.png",
+        "selectedIcon": "imgs/foss4g2026-spot-aquarium-selected.png"
+      }
+    },
+    {
+      "type": "Feature",
+      "id": "miyajima-history-folklore",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          132.31747,
+          34.295316
+        ]
+      },
+      "properties": {
+        "name": {
+          "ja": "宮島歴史民俗資料館",
+          "en": "Miyajima Museum of History and Folklore"
+        },
+        "address": {
+          "ja": "廿日市市宮島町57",
+          "en": "57 Miyajima-chō, Hatsukaichi"
+        },
+        "desc": {
+          "ja": "<b>資料館</b><br><br>江戸期の商家の建物を使った資料館。母屋と土蔵、庭が残り、島の暮らしや厳島神社の祭礼、木工や杓子づくりといった宮島の産業に関する資料を展示する。町家の造りそのものが見どころでもある。<br><br>開館 9:00〜17:00（最終入館16:30）／休館 月曜・12月26日〜31日<br>観覧料 大人300円（65歳以上150円）／高校生170円／小・中学生無料<br>TEL 0829-44-2019<br>宮島訪問税100円が船の運賃に上乗せされます（年間500円の一括納付もありますが、初回訪問の前月10日までの申告が要ります）。<br><br>写真: Daderot / CC0 — Wikimedia Commons<br><br><a href=\"https://2026.foss4g.org/ja/attending/travel-guide/\" target=\"_blank\">FOSS4G 旅行ガイド</a>",
+          "en": "<b>Museum</b><br><br>A museum housed in the buildings of an Edo-period merchant family. The main house, storehouses and garden survive, and the displays cover life on the island, the festivals of Itsukushima Shrine, and local trades such as woodwork and the making of rice scoops. The townhouse itself is much of the interest.<br><br>Open 9:00–17:00, last entry 16:30; closed Mondays and 26–31 December<br>¥300 adults, ¥150 age 65 and over, ¥170 high-school students, free for school pupils<br>Tel. +81 829-44-2019<br>A Miyajima visitor tax of ¥100 is added to the ferry fare. An annual ¥500 payment also exists, but must be filed in advance and is not a same-day option.<br><br>Photo: Daderot / CC0 — Wikimedia Commons<br><br><a href=\"https://2026.foss4g.org/en/attending/travel-guide/\" target=\"_blank\">FOSS4G travel guide</a>"
+        },
+        "image": [
+          {
+            "src": "https://upload.wikimedia.org/wikipedia/commons/thumb/3/3d/Museum_of_History_and_Folklore%2C_Miyajima_-_DSC02265.JPG/1280px-Museum_of_History_and_Folklore%2C_Miyajima_-_DSC02265.JPG?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail",
+            "caption": "Daderot / CC0 — Wikimedia Commons",
+            "page": "https://commons.wikimedia.org/wiki/File:Museum_of_History_and_Folklore,_Miyajima_-_DSC02265.JPG"
+          }
+        ],
+        "icon": "imgs/foss4g2026-spot-museum.png",
+        "selectedIcon": "imgs/foss4g2026-spot-museum-selected.png"
+      }
+    },
+    {
+      "type": "Feature",
+      "id": "omotesando-shotengai",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          132.3215,
+          34.2986
+        ]
+      },
+      "properties": {
+        "name": {
+          "ja": "表参道商店街",
+          "en": "Omotesandō Shopping Street"
+        },
+        "address": {
+          "ja": "廿日市市宮島町",
+          "en": "Miyajima-chō, Hatsukaichi"
+        },
+        "desc": {
+          "ja": "<b>商店街</b><br><br>桟橋から厳島神社へ向かう途中の屋根つき商店街。焼きたてのもみじ饅頭、牡蠣の炭火焼き、あなごめしの店が並ぶ。宮島細工の杓子を売る店が多い。長さ7.7mの大杓子はかつてこの通りに置かれていたが、2021年にetto宮島交流館へ移された。<br><br>店ごとに営業時間が異なる<br>宮島訪問税100円が船の運賃に上乗せされます（年間500円の一括納付もありますが、初回訪問の前月10日までの申告が要ります）。<br><br>写真: 芦田荒角「宮島表参道商店街.jpg」/ CC BY-SA 4.0 <https://creativecommons.org/licenses/by-sa/4.0> — Wikimedia Commons（表示用に縮小）<br><br><a href=\"https://2026.foss4g.org/ja/attending/travel-guide/\" target=\"_blank\">FOSS4G 旅行ガイド</a>",
+          "en": "<b>Shopping street</b><br><br>A covered arcade on the way from the pier to Itsukushima Shrine, lined with shops selling momiji manjū fresh from the mould, oysters grilled over charcoal, and conger-eel rice. Many sell the rice scoops for which the island's woodworkers are known. A giant scoop 7.7 m long formerly stood on this street; in 2021 it was moved to the etto Miyajima Exchange Centre.<br><br>Opening hours differ from shop to shop<br>A Miyajima visitor tax of ¥100 is added to the ferry fare. An annual ¥500 payment also exists, but must be filed in advance and is not a same-day option.<br><br>Photo: 芦田荒角, \"宮島表参道商店街.jpg\", CC BY-SA 4.0 <https://creativecommons.org/licenses/by-sa/4.0>, via Wikimedia Commons (resized)<br><br><a href=\"https://2026.foss4g.org/en/attending/travel-guide/\" target=\"_blank\">FOSS4G travel guide</a>"
+        },
+        "image": [
+          {
+            "src": "https://upload.wikimedia.org/wikipedia/commons/thumb/f/fc/%E5%AE%AE%E5%B3%B6%E8%A1%A8%E5%8F%82%E9%81%93%E5%95%86%E5%BA%97%E8%A1%97.jpg/1280px-%E5%AE%AE%E5%B3%B6%E8%A1%A8%E5%8F%82%E9%81%93%E5%95%86%E5%BA%97%E8%A1%97.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail",
+            "caption": "芦田荒角「宮島表参道商店街.jpg」/ CC BY-SA 4.0 <https://creativecommons.org/licenses/by-sa/4.0> — Wikimedia Commons（表示用に縮小）",
+            "page": "https://commons.wikimedia.org/wiki/File:%E5%AE%AE%E5%B3%B6%E8%A1%A8%E5%8F%82%E9%81%93%E5%95%86%E5%BA%97%E8%A1%97.jpg"
+          }
+        ],
+        "icon": "imgs/foss4g2026-spot-food.png",
+        "selectedIcon": "imgs/foss4g2026-spot-food-selected.png"
+      }
+    }
+  ]
+}

@@ -1,0 +1,179 @@
+{
+  "type": "FeatureCollection",
+  "id": "foss4g2026_venues_poi",
+  "name": {
+    "ja": "FOSS4G Hiroshima 2026施設案内",
+    "en": "FOSS4G Hiroshima 2026 Venues"
+  },
+  "lang": "ja",
+  "properties": {
+    "icon": "imgs/foss4g2026-pin-conference.png",
+    "selectedIcon": "imgs/foss4g2026-pin-conference-selected.png"
+  },
+  "features": [
+    {
+      "type": "Feature",
+      "id": "rcc-bunka-center",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          132.4693599,
+          34.3949836
+        ]
+      },
+      "properties": {
+        "name": {
+          "ja": "RCC文化センター",
+          "en": "RCC Bunka Center"
+        },
+        "address": {
+          "ja": "広島市中区橋本町5-11",
+          "en": "5-11 Hashimoto-chō, Naka-ku, Hiroshima"
+        },
+        "desc": {
+          "ja": "<b>ワークショップ会場</b><br>2026年8月30日〜31日<br><br>JR広島駅南口から徒歩10分<br>広電・銀山町（かなやまちょう）電停から徒歩5分<br><br><a href=\"https://2026.foss4g.org/ja/attending/venue/\" target=\"_blank\">会場案内</a>\n<br><br>(画像はFOSS4G Hiroshima 2026公式サイトより)",
+          "en": "<b>Workshop venue</b><br>30–31 August 2026<br><br>10 min walk from the south exit of JR Hiroshima Station<br>5 min walk from Kanayama-chō tram stop (Hiroden)<br><br><a href=\"https://2026.foss4g.org/en/attending/venue/\" target=\"_blank\">Venue information</a>\n<br><br>(Image courtesy of the official FOSS4G Hiroshima 2026 website)"
+        },
+        "icon": "imgs/foss4g2026-pin-workshop.png",
+        "selectedIcon": "imgs/foss4g2026-pin-workshop-selected.png",
+        "image": "imgs/rccbc.png"
+      }
+    },
+    {
+      "type": "Feature",
+      "id": "john-blue",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          132.460982,
+          34.3897269
+        ]
+      },
+      "properties": {
+        "name": {
+          "ja": "JOHN BLUE",
+          "en": "JOHN BLUE"
+        },
+        "address": {
+          "ja": "広島市中区 並木通り",
+          "en": "Namiki-dōri, Naka-ku, Hiroshima"
+        },
+        "desc": {
+          "ja": "<b>Geochicas 会場</b><br>2026年8月31日<br><br>RCC文化センターから徒歩15分<br><br><a href=\"https://2026.foss4g.org/ja/attending/venue/\" target=\"_blank\">会場案内</a>",
+          "en": "<b>Geochicas venue</b><br>31 August 2026<br><br>15 min walk from RCC Bunka Center<br><br><a href=\"https://2026.foss4g.org/en/attending/venue/\" target=\"_blank\">Venue information</a>"
+        },
+        "icon": "imgs/foss4g2026-pin-geochicas.png",
+        "selectedIcon": "imgs/foss4g2026-pin-geochicas-selected.png"
+      }
+    },
+    {
+      "type": "Feature",
+      "id": "international-conference-center-hiroshima",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          132.4510433,
+          34.3920687
+        ]
+      },
+      "properties": {
+        "name": {
+          "ja": "広島国際会議場",
+          "en": "International Conference Center Hiroshima"
+        },
+        "address": {
+          "ja": "広島市中区中島町1-5（平和記念公園内）",
+          "en": "1-5 Nakajima-chō, Naka-ku, Hiroshima (in Peace Memorial Park)"
+        },
+        "desc": {
+          "ja": "<b>メインカンファレンス会場</b><br>2026年9月1日〜3日<br><br>広電・原爆ドーム前電停から徒歩10分<br>広島バス24系統「平和記念公園」バス停すぐ<br><br><a href=\"https://2026.foss4g.org/ja/attending/venue/\" target=\"_blank\">会場案内</a>\n<br><br>(画像はFOSS4G Hiroshima 2026公式サイトより)",
+          "en": "<b>Main conference venue</b><br>1–3 September 2026<br><br>10 min walk from Genbaku Dōmu-mae tram stop (Hiroden)<br>Right at the Peace Memorial Park bus stop, Hiroshima Bus route 24<br><br><a href=\"https://2026.foss4g.org/en/attending/venue/\" target=\"_blank\">Venue information</a>\n<br><br>(Image courtesy of the official FOSS4G Hiroshima 2026 website)"
+        },
+        "icon": "imgs/foss4g2026-pin-conference.png",
+        "selectedIcon": "imgs/foss4g2026-pin-conference-selected.png",
+        "image": "imgs/hiroshimaconventioncenter.png"
+      }
+    },
+    {
+      "type": "Feature",
+      "id": "hiroshima-gate-park",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          132.4549765,
+          34.3974201
+        ]
+      },
+      "properties": {
+        "name": {
+          "ja": "ひろしまゲートパーク",
+          "en": "HIROSHIMA GATE PARK"
+        },
+        "address": {
+          "ja": "広島市中区元町5-25",
+          "en": "5-25 Motomachi, Naka-ku, Hiroshima"
+        },
+        "desc": {
+          "ja": "<b>アイスブレーカー会場</b><br>2026年9月1日<br><br>広電・原爆ドーム前電停から徒歩1分<br><br><a href=\"https://2026.foss4g.org/ja/attending/venue/\" target=\"_blank\">会場案内</a>",
+          "en": "<b>Icebreaker venue</b><br>1 September 2026<br><br>1 min walk from Genbaku Dōmu-mae tram stop (Hiroden)<br><br><a href=\"https://2026.foss4g.org/en/attending/venue/\" target=\"_blank\">Venue information</a>"
+        },
+        "icon": "imgs/foss4g2026-pin-icebreaker.png",
+        "selectedIcon": "imgs/foss4g2026-pin-icebreaker-selected.png"
+      }
+    },
+    {
+      "type": "Feature",
+      "id": "grand-prince-hotel-hiroshima",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          132.4642969,
+          34.3427026
+        ]
+      },
+      "properties": {
+        "name": {
+          "ja": "グランドプリンスホテル広島",
+          "en": "Grand Prince Hotel Hiroshima"
+        },
+        "address": {
+          "ja": "広島市南区元宇品町23-1",
+          "en": "23-1 Motoujina-machi, Minami-ku, Hiroshima"
+        },
+        "desc": {
+          "ja": "<b>ガラディナー会場</b><br>2026年9月2日<br><br>広島国際会議場からのシャトルバスでアクセスします<br><br><a href=\"https://2026.foss4g.org/ja/attending/venue/\" target=\"_blank\">会場案内</a>",
+          "en": "<b>Gala dinner venue</b><br>2 September 2026<br><br>Reached by shuttle bus from the International Conference Center Hiroshima<br><br><a href=\"https://2026.foss4g.org/en/attending/venue/\" target=\"_blank\">Venue information</a>"
+        },
+        "icon": "imgs/foss4g2026-pin-gala.png",
+        "selectedIcon": "imgs/foss4g2026-pin-gala-selected.png"
+      }
+    },
+    {
+      "type": "Feature",
+      "id": "aster-plaza",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          132.4479568,
+          34.3876314
+        ]
+      },
+      "properties": {
+        "name": {
+          "ja": "アステールプラザ 7階 研修室",
+          "en": "Aster Plaza, 7F Seminar Rooms"
+        },
+        "address": {
+          "ja": "広島市中区加古町4-17",
+          "en": "4-17 Kako-machi, Naka-ku, Hiroshima"
+        },
+        "desc": {
+          "ja": "<b>コミュニティスプリント会場</b><br>2026年9月4日 9:30〜17:00<br><br>会場内は飲み物可・食べ物不可<br><br><a href=\"https://2026.foss4g.org/ja/program-schedule/community-sprint/\" target=\"_blank\">コミュニティスプリント</a>",
+          "en": "<b>Community Sprint venue</b><br>4 September 2026, 9:30–17:00<br><br>Drinks allowed. No food.<br><br><a href=\"https://2026.foss4g.org/en/program-schedule/community-sprint/\" target=\"_blank\">Community Sprint</a>"
+        },
+        "icon": "imgs/foss4g2026-pin-sprint.png",
+        "selectedIcon": "imgs/foss4g2026-pin-sprint-selected.png"
+      }
+    }
+  ]
+}
