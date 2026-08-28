@@ -1,16 +1,20 @@
 @echo off
-rem Maplat Showcase ã‚­ã‚ªã‚¹ã‚¯èµ·å‹•ï¼ˆWindowsï¼‰
-rem ãƒ€ãƒ–ãƒ«ã‚¯ãƒªãƒƒã‚¯ã§: ã‚¹ãƒªãƒ¼ãƒ—/ç”»é¢ã‚ªãƒ•ã‚’ç„¡åŠ¹åŒ– + Chrome ã‚’å…¨ç”»é¢ã‚­ã‚ªã‚¹ã‚¯ã§èµ·å‹•ã€‚
-rem çµ‚äº†ã¯ Alt+F4ã€‚é›»æºè¨­å®šã¯å…ƒã«æˆ»ã‚‰ãªã„ã®ã§ã€å¸¸ç”¨PCãªã‚‰ä¸‹ã® powercfg 2è¡Œã‚’æ¶ˆã—ã¦
-rem ã€Œè¨­å®š > ã‚·ã‚¹ãƒ†ãƒ  > é›»æºã€ã§ä¼šæœŸä¸­ã ã‘ã€Œãªã—ã€ã«ã™ã‚‹é‹ç”¨ã§ã‚‚ã‚ˆã„ã€‚
+rem Maplat Showcase ƒLƒIƒXƒN‹N“®iWindowsj
+rem ƒ_ƒuƒ‹ƒNƒŠƒbƒN‚Å: ƒXƒŠ[ƒv/‰æ–ÊƒIƒt‚ğ–³Œø‰» + Chrome ‚ğ‘S‰æ–ÊƒLƒIƒXƒN‚Å‹N“®B
+rem I—¹‚Í Alt+F4B“dŒ¹İ’è‚ÍŒ³‚É–ß‚ç‚È‚¢‚Ì‚ÅAí—pPC‚È‚ç‰º‚Ì powercfg 2s‚ğÁ‚µ‚Ä
+rem uİ’è > ƒVƒXƒeƒ€ > “dŒ¹v‚Å‰ïŠú’†‚¾‚¯u‚È‚µv‚É‚·‚é‰^—p‚Å‚à‚æ‚¢B
+rem ¦‚±‚Ìƒtƒ@ƒCƒ‹‚Í CRLF ‰üsECP932 ‚Å•Û‘¶‚·‚é‚±‚ÆBLF ‚Ì‚İ‚¾‚Æ cmd.exe ‚ª
+rem   sŒp‘±‚âˆê•”‚Ì\•¶‚ğ³‚µ‚­‰ğß‚Å‚«‚È‚¢iÀáŠQ 2026-08-28: URL ‚ªÌ‚Ä‚ç‚ê
+rem   Chrome ‚ª‰Šú‰æ–Ê‚Ì‚Ü‚ÜŠJ‚¢‚½jBsŒp‘±‚Ì ^ ‚àg‚í‚È‚¢B
+
 set URL=https://code4history.dev/MaplatShowcase/foss4g_hiroshima_2026.html
 
-rem ---- è¡¨ç¤ºã™ã‚‹ãƒ‡ã‚£ã‚¹ãƒ—ãƒ¬ã‚¤ã®é¸æŠ ----------------------------------------
-rem ä»®æƒ³ãƒ‡ã‚¹ã‚¯ãƒˆãƒƒãƒ—ä¸Šã®åº§æ¨™ã‚’1ç‚¹æŒ‡å®šã™ã‚‹ã¨ã€ãã®ç‚¹ãŒä¹—ã£ã¦ã„ã‚‹ãƒ‡ã‚£ã‚¹ãƒ—ãƒ¬ã‚¤ã§
-rem å…¨ç”»é¢ã«ãªã‚‹ã€‚åº§æ¨™ç³»ã¯ã€Œè¨­å®š > ã‚·ã‚¹ãƒ†ãƒ  > ãƒ‡ã‚£ã‚¹ãƒ—ãƒ¬ã‚¤ã€ã®é…ç½®ã«å¯¾å¿œ:
-rem   ãƒ¡ã‚¤ãƒ³ç”»é¢ã®å·¦ä¸ŠãŒ 0,0ï¼ˆã€Œè­˜åˆ¥ã€ãƒœã‚¿ãƒ³ã§ç•ªå·ã‚’ç¢ºèªã§ãã‚‹ï¼‰ã€‚
-rem   ä¾‹) å¹…1920ã®ãƒ¡ã‚¤ãƒ³ã®å³ã«å¤–éƒ¨ãƒ‡ã‚£ã‚¹ãƒ—ãƒ¬ã‚¤ â†’ set POS=1920,0
-rem   ä¾‹) ãƒ¡ã‚¤ãƒ³ã®å·¦ã«å¤–éƒ¨ãƒ‡ã‚£ã‚¹ãƒ—ãƒ¬ã‚¤(å¹…2560) â†’ set POS=-2560,0
+rem ---- •\¦‚·‚éƒfƒBƒXƒvƒŒƒC‚Ì‘I‘ğ ----------------------------------------
+rem ‰¼‘zƒfƒXƒNƒgƒbƒvã‚ÌÀ•W‚ğ1“_w’è‚·‚é‚ÆA‚»‚Ì“_‚ªæ‚Á‚Ä‚¢‚éƒfƒBƒXƒvƒŒƒC‚Å
+rem ‘S‰æ–Ê‚É‚È‚éBÀ•WŒn‚Íuİ’è > ƒVƒXƒeƒ€ > ƒfƒBƒXƒvƒŒƒCv‚Ì”z’u‚É‘Î‰:
+rem   ƒƒCƒ“‰æ–Ê‚Ì¶ã‚ª 0,0iu¯•Êvƒ{ƒ^ƒ“‚Å”Ô†‚ğŠm”F‚Å‚«‚éjB
+rem   —á) •1920‚ÌƒƒCƒ“‚Ì‰E‚ÉŠO•”ƒfƒBƒXƒvƒŒƒC ¨ set POS=1920,0
+rem   —á) ƒƒCƒ“‚Ì¶‚ÉŠO•”ƒfƒBƒXƒvƒŒƒC(•2560) ¨ set POS=-2560,0
 set POS=0,0
 
 powercfg /change standby-timeout-ac 0
@@ -18,6 +22,11 @@ powercfg /change monitor-timeout-ac 0
 
 set CHROME="C:\Program Files\Google\Chrome\Application\chrome.exe"
 if not exist %CHROME% set CHROME="C:\Program Files (x86)\Google\Chrome\Application\chrome.exe"
+if not exist %CHROME% goto nochrome
 
-%CHROME% --kiosk --window-position=%POS% --user-data-dir="%LOCALAPPDATA%\maplat-kiosk-profile" ^
-  --no-first-run --disable-session-crashed-bubble --noerrdialogs %URL%
+%CHROME% --kiosk --window-position=%POS% --user-data-dir="%LOCALAPPDATA%\maplat-kiosk-profile" --no-first-run --disable-session-crashed-bubble --noerrdialogs %URL%
+exit /b
+
+:nochrome
+echo Google Chrome ‚ªŒ©‚Â‚©‚è‚Ü‚¹‚ñ‚Å‚µ‚½BƒCƒ“ƒXƒg[ƒ‹æ‚ğŠm”F‚µ‚Ä‚­‚¾‚³‚¢B
+pause
