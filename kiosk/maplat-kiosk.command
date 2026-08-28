@@ -11,7 +11,9 @@ trap 'kill $CAF 2>/dev/null' EXIT
 
 # -n: 既存Chromeと別インスタンス（既存が動いていると --kiosk が無視されるため
 #     専用プロファイルで分離する） / -W: そのインスタンスの終了まで待つ
-open -naW "Google Chrome" --args \
+# フラグは連結しないこと: open の -a は同一トークンの残りを引数として食うため、
+# -naW と書くと「-a W」と解釈されて "Google Chrome" がファイル名扱いになる（実障害 2026-08-28）
+open -n -W -a "Google Chrome" --args \
   --kiosk \
   --user-data-dir="$HOME/.maplat-kiosk-profile" \
   --no-first-run --disable-session-crashed-bubble --noerrdialogs \
