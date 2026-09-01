@@ -168,7 +168,7 @@ html, body {
 #app-qr {
   position: fixed;
   left: 0.75rem;
-  top: 6rem;
+  top: 10rem;
   padding: 0.6rem 0.6rem 0.5rem;
   border-radius: 12px;
   background: rgba(10, 14, 18, 0.78);
