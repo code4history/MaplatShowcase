@@ -7,7 +7,10 @@
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <meta name="description" content="古地図を歪めずに現代地図と重ね合わせる Maplat の自動デモ。FOSS4G Hiroshima 2026。">
   <link rel="icon" href="app/favicon.ico">
-  <link rel="stylesheet" href="demo/demo.css">
+  <link rel="stylesheet" href="demo/demo.css?v=qr1">
+  <!-- 保険: 旧 demo.css がキャッシュから使われても素の 420px QR を出さない
+       （2026-09-01 会場実障害。CSS/JS は max-age=14400 で HTML の 600 より長く残る） -->
+  <style>#app-qr{position:fixed;opacity:0}</style>
 </head>
 
 <body>
@@ -63,7 +66,7 @@
     <div class="qr-float-cap">Maplat Hiroshima App</div>
   </div>
 
-  <script src="demo/demo.js"></script>
+  <script src="demo/demo.js?v=qr1"></script>
 </body>
 
 </html>
