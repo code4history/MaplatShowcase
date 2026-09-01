@@ -171,7 +171,7 @@ async function guard(label, fn, retryMs = 1000) {
 // ---- 進行テンポ ----------------------------------------------------------
 // 全体の再生速度倍率。1 = 設計値 / 2 = 2倍ゆっくり。
 // 設計値のままでは「忙しくて読めない」ため（人間指摘 2026-08-27）。
-const PACE = 2;
+const PACE = 2.4;
 const wp = ms => wait(Math.round(ms * PACE));
 
 const HOME = [132.451219, 34.39204];   // 広島国際会議場（アプリの homePosition）
