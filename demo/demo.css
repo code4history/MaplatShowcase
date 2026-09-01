@@ -161,6 +161,48 @@ html, body {
 
 #dots span.on { background: #7ec8ff; }
 
+/* ---- アプリ QR フロート（ライブデモ中のみ） ----
+   位置は左上。Maplat の .ol-zoom（top .5em / left .5em / 約 35x70px、
+   実測で下端 78px）の直下に置き、既存 UI を隠さない。
+   左列にはこれ以外のコントロールが積まれないことを実測済み。 */
+#app-qr {
+  position: fixed;
+  left: 0.75rem;
+  top: 6rem;
+  padding: 0.6rem 0.6rem 0.5rem;
+  border-radius: 12px;
+  background: rgba(10, 14, 18, 0.78);
+  backdrop-filter: blur(4px);
+  box-shadow: 0 4px 24px rgba(0, 0, 0, 0.4);
+  text-align: center;
+  opacity: 0;
+  transition: opacity 0.45s ease;
+  pointer-events: none;
+  z-index: 50;
+}
+
+#app-qr.visible { opacity: 1; }
+
+#app-qr .qr-float-img {
+  display: block;
+  height: clamp(84px, 13vh, 132px);
+  width: auto;
+  border-radius: 4px;
+}
+
+#app-qr .qr-float-cap {
+  margin-top: 0.4rem;
+  font-size: clamp(0.62rem, 1.15vh, 0.8rem);
+  color: #f2f4f6;
+  letter-spacing: 0.02em;
+  white-space: nowrap;
+}
+
+/* 極端に低いビューポートでは下段 UI 帯に近づくため出さない（UI を隠さないことを優先） */
+@media (max-height: 420px) {
+  #app-qr { display: none; }
+}
+
 /* ---- ブランド素材 ---- */
 @font-face {
   font-family: "Maplat100";

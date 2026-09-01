@@ -18,6 +18,7 @@ const $ = sel => document.querySelector(sel);
 const subtitleBox = $("#subtitle");
 const subJa = $("#subtitle .sub-ja");
 const subEn = $("#subtitle .sub-en");
+const qrFloat = $("#app-qr");
 
 let paused = false;
 let skipRequested = false;
@@ -399,6 +400,10 @@ function showSlide(idx) {
   document.querySelectorAll(".slide").forEach(el => el.classList.remove("active"));
   $(SLIDES[idx].el).classList.add("active");
   document.querySelectorAll("#dots span").forEach((d, i) => d.classList.toggle("on", i === idx));
+  // アプリ QR はライブデモ中だけ出す（静止スライドは自前の QR / ロゴを持っている）。
+  // qrFloat の存在確認は、会場での差し替え時に HTML と JS のキャッシュ世代がずれても
+  // デモ本体が止まらないようにするための防壁（設計 §5 の逸脱理由）。
+  if (qrFloat) qrFloat.classList.toggle("visible", SLIDES[idx].type === "live");
 }
 
 async function runSlide(idx) {
