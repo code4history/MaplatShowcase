@@ -1,0 +1,138 @@
+<!DOCTYPE html>
+<html lang="ja">
+
+<head>
+  <meta charset="UTF-8">
+  <title>ARIDA 2026 デモ — Maplat Showcase</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="description" content="動体計測研究会 2026-11-19 講演「古地図・絵地図を歪めずに現代地図とつなぐ」のデモ 4 本。 / Four demos for the ARIDA talk on Maplat's triangulated coordinate transformation.">
+  <link rel="icon" href="../app/favicon.ico">
+  <style>
+    @font-face {
+      font-family: "Maplat100";
+      src: url("../demo/assets/Maplat100.ttf") format("truetype");
+      font-display: block;
+    }
+
+    html, body {
+      margin: 0;
+      padding: 0;
+      min-height: 100%;
+      background:
+        radial-gradient(1200px 700px at 30% 15%, #24313d 0%, transparent 60%),
+        radial-gradient(1000px 800px at 85% 90%, #2d2331 0%, transparent 55%),
+        #101418;
+      color: #f2f4f6;
+      font-family: "Hiragino Sans", "Noto Sans JP", "Helvetica Neue", Arial, sans-serif;
+    }
+
+    .wrap {
+      max-width: 880px;
+      margin: 0 auto;
+      padding: 9vh 6vw 12vh;
+      text-align: center;
+    }
+
+    h1.wordmark {
+      font-family: "Maplat100", sans-serif;
+      font-weight: normal;
+      font-size: clamp(3rem, 9vw, 5.5rem);
+      margin: 0 0 0.4rem;
+    }
+
+    .site-name {
+      font-size: clamp(1rem, 2.4vw, 1.3rem);
+      letter-spacing: 0.35em;
+      color: #7ec8ff;
+      text-transform: uppercase;
+      margin: 0 0 0.9rem;
+    }
+
+    .lede-ja { margin: 0.2rem 0; font-size: clamp(1rem, 2.2vw, 1.25rem); }
+    .lede-en { margin: 0.2rem 0 3rem; font-size: clamp(0.85rem, 1.8vw, 1.05rem); color: #aab6c2; }
+
+    .cards { display: flex; flex-direction: column; gap: 1.4rem; }
+
+    .card {
+      display: block;
+      text-decoration: none;
+      color: inherit;
+      background: rgba(255, 255, 255, 0.045);
+      border: 1px solid rgba(255, 255, 255, 0.12);
+      border-radius: 14px;
+      padding: 1.6rem 1.8rem;
+      text-align: left;
+      transition: border-color 0.25s, background 0.25s, transform 0.25s;
+    }
+
+    .card:hover {
+      border-color: #7ec8ff;
+      background: rgba(126, 200, 255, 0.07);
+      transform: translateY(-2px);
+    }
+
+    .card h2 { margin: 0 0 0.5rem; font-size: clamp(1.15rem, 2.6vw, 1.5rem); }
+    .card .desc-ja { margin: 0.15rem 0; font-size: 0.98rem; line-height: 1.65; }
+    .card .desc-en { margin: 0.15rem 0 0.9rem; font-size: 0.85rem; line-height: 1.6; color: #aab6c2; }
+    .card .go { color: #7ec8ff; font-size: 0.95rem; }
+
+    .links { margin: -1.6rem 0 2.6rem; font-size: 0.9rem; color: #aab6c2; }
+    .links a { color: #9fd4ff; }
+
+    footer {
+      margin-top: 4rem;
+      font-size: 0.8rem;
+      color: #77879a;
+      line-height: 1.8;
+    }
+    footer a { color: #9fd4ff; text-decoration: none; }
+  </style>
+</head>
+
+<body>
+  <div class="wrap">
+    <h1 class="wordmark">M</h1>
+    <p class="site-name">ARIDA 2026</p>
+    <p class="lede-ja">動体計測研究会 2026-11-19 講演のデモ</p>
+    <p class="lede-en">Demos for the ARIDA talk (2026-11-19)</p>
+    <p class="links">
+      講演資料のまとめ / Talk materials: <a href="https://www.maplat.jp/">www.maplat.jp</a>
+      ／ <a href="../">Showcase の入口 / Showcase home</a>
+    </p>
+
+    <div class="cards">
+      <a class="card" href="demo-a.html">
+        <h2>① 往復変換 / Round trip</h2>
+        <p class="desc-ja">絵図で 1 点を選ぶと、現代地図に対応する位置が出ます。同じ三角網で戻すと、元の点に戻ります。</p>
+        <p class="desc-en">Pick a point on the old map to see its position on the modern map; the same triangle network brings it back to where it started.</p>
+        <span class="go">▶ 試す / Try</span>
+      </a>
+      <a class="card" href="demo-b.html">
+        <h2>② 画像の縁を越える / Beyond the edge</h2>
+        <p class="desc-ja">絵図の上でカーソルを動かし（スマホでは指でなぞり）、対応点の凸包と画像の縁の外へ出ても、現代地図の点は途切れずに動きます。</p>
+        <p class="desc-en">Move the cursor (or drag a finger) across the old map, out of the control points' hull and past the image edge — the point on the modern map keeps moving continuously.</p>
+        <span class="go">▶ 試す / Try</span>
+      </a>
+      <a class="card" href="demo-c.html">
+        <h2>③ 制約辺の有無 / Constrained edges</h2>
+        <p class="desc-ja">奈良町の碁盤の目で、交差点だけに対応点を置いて道を歩きます。道を辺にした場合としない場合で、写した印が道に乗るかを比べます。</p>
+        <p class="desc-en">Walk a street in the Naramachi grid with control points only at the crossings, and compare whether the mapped mark stays on the road with and without the street as a constrained edge.</p>
+        <span class="go">▶ 試す / Try</span>
+      </a>
+      <a class="card" href="demo-d.html">
+        <h2>④ 5 点変換 / Five-point fit</h2>
+        <p class="desc-ja">絵図を回して拡大すると、中心 1 点だけで合わせた現代地図は外れ、上下左右を加えた 5 点で合わせると重なります。</p>
+        <p class="desc-en">Rotate and zoom the old map: matching the modern map by its centre alone drifts off, while matching by five points (centre plus four around it) keeps them aligned.</p>
+        <span class="go">▶ 試す / Try</span>
+      </a>
+    </div>
+
+    <footer>
+      <a href="https://github.com/code4history/Maplat">Maplat</a> — 10th Anniversary (2016–2026)<br>
+      地図: 地理院タイル（国土地理院）／ 各絵図の所蔵は各デモの画面に表記 / Credits are shown on each demo<br>
+      © Code for History / Nayuta, Inc.
+    </footer>
+  </div>
+</body>
+
+</html>

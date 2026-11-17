@@ -1,0 +1,78 @@
+<!doctype html>
+<html lang="ja">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>DEMO-C 交差点から交差点まで歩く — ARIDA デモ</title>
+<style>
+  html, body { margin: 0; width: 100%; height: 100%; background: #0b0f18; overflow: hidden;
+    font-family: "Hiragino Sans", "Noto Sans JP", "Yu Gothic", "Meiryo", system-ui, sans-serif; }
+  #stage { position: relative; width: 1200px; height: 800px; display: grid; grid-template-columns: 600px 600px;
+    grid-template-rows: 800px; background: #0f1420; overflow: hidden; }
+  .pane { position: relative; min-width: 0; min-height: 0; overflow: hidden; background: #0f1420; }
+  .pane canvas { display: block; width: 600px; height: 800px; touch-action: none; }
+  #divider { position: absolute; top: 0; bottom: 0; left: 599px; width: 2px; background: #39445a; z-index: 6; pointer-events: none; }
+  .pane-label { position: absolute; top: 12px; left: 12px; z-index: 5; padding: 4px 10px; border-radius: 8px;
+    background: rgba(15,20,32,.72); border: 1px solid rgba(255,255,255,.16); color: #e8edf5; font-size: 20px; pointer-events: none; }
+  #mode-buttons { position: absolute; left: 612px; top: 52px; z-index: 8; display: flex; gap: 8px; padding: 6px; border-radius: 12px;
+    background: rgba(15,20,32,.78); }
+  /* v2.9（visual 13 の残り）: 押していないボタンは紙色 85%・墨の文字（押した状態＝墨地・白字と見分ける） */
+  #mode-buttons button { font: 700 20px/1 "Hiragino Sans", "Noto Sans JP", sans-serif; color: #312D2A; background: rgba(255,255,255,.85);
+    border: 2px solid transparent; border-radius: 9px; padding: 8px 12px; cursor: pointer; }
+  /* v2.8（visual 13）: 押下中は 4 本とも ink 地・白字（白の縁）。状態の色（制約なし＝赤・制約あり＝橙）は印と軌跡だけに使う */
+  #mode-buttons button[aria-pressed="true"] { background: #312D2A; color: #fff; border-color: #ffffff; }
+  #mode-buttons button#focus-place { font-size: 20px; font-weight: 700; padding: 8px 10px; }
+  /* 歩くボタン: 左面の下（出典の上） */
+  #walk-buttons { position: absolute; left: 12px; bottom: 52px; z-index: 8; display: flex; gap: 8px; padding: 6px; border-radius: 12px;
+    background: rgba(15,20,32,.78); }
+  #walk-buttons button { font: 700 20px/1 "Hiragino Sans", "Noto Sans JP", sans-serif; color: #312D2A; background: rgba(255,255,255,.85);
+    border: 2px solid transparent; border-radius: 9px; padding: 8px 14px; cursor: pointer; }
+  #walk-buttons button:disabled { opacity: .45; cursor: default; }
+  /* 凡例: 右面の左上（モードの切替の下）。点の 3 種と線の種類（両面共通）。v2.8: 14 → 20px・行間を詰めた */
+  #legend { position: absolute; left: 612px; top: 116px; z-index: 7; padding: 6px 10px; border-radius: 8px;
+    background: rgba(255,255,255,.9); color: #312D2A; font-size: 20px; line-height: 1.2; pointer-events: none;
+    box-shadow: 0 2px 8px rgba(0,0,0,.3); }
+  #legend .ttl { font-weight: 700; }
+  #legend .row { display: flex; align-items: center; white-space: nowrap; }
+  #legend .note { color: #5E5E5E; margin-top: 2px; }
+  #legend svg { width: 34px; height: 16px; flex: none; margin-right: 6px; }
+  /* 左面の数値パネル（外れの数値 4 行だけ）。v2.9（visual N3）: ラベルと数値を同じ行に置き、ラベル 20px・数値 28px、
+     外形 200×180px 以内（v2.8 の 24・36px・2 段組みは約 300×247px で絵図の上部を覆った） */
+  #stage .demo-c-panel { padding: 6px 10px; border-radius: 10px; width: auto; max-width: 200px; box-sizing: border-box; }
+  #stage .demo-c-panel .aero-panel__row { flex-wrap: nowrap; white-space: nowrap; align-items: baseline; gap: 0 8px; }
+  #stage .demo-c-panel .aero-panel__row + .aero-panel__row { margin-top: 0; }
+  #stage .demo-c-panel .aero-panel__label { font-size: 20px; }
+  #stage .demo-c-panel .aero-panel__num { font-size: 28px; line-height: 1.2; }
+  #stage .demo-c-panel .chip { display: inline-block; width: 14px; height: 14px; border-radius: 50%; margin-right: 4px; vertical-align: -1px; border: 1.5px solid #fff; box-shadow: 0 0 0 1px rgba(0,0,0,.25); }
+  #source { position: absolute; left: 12px; bottom: 12px; z-index: 5; padding: 4px 10px; border-radius: 8px;
+    background: rgba(15,20,32,.72); color: #e8edf5; font-size: 18px; pointer-events: none; } /* v2.9: 16 → 18px */
+  #fatal { position: absolute; inset: 0; display: none; place-items: center; z-index: 50; background: rgba(0,0,0,.8); color: #fff; font-size: 22px; padding: 40px; }
+  /* v3.5: タッチ（粗いポインタ）ではボタンを押せる高さに。--tap は stage-fit.mjs が縮尺 k から出す（収録面の px） */
+  @media (pointer: coarse) { #stage button { min-height: var(--tap, 36px); } }
+  /* 切替ボタンが高くなるぶん、その下の凡例を下げる（ボタンの帯 = 上端 52px＋余白 6px×2＋ボタン） */
+  @media (pointer: coarse) { #legend { top: calc(52px + 12px + 4px + var(--tap, 36px) + 8px); } }
+</style>
+</head>
+<body>
+<div id="stage">
+  <section class="pane"><canvas id="map-left"></canvas><div class="pane-label">古地図（絵図）と三角網</div></section>
+  <section class="pane"><canvas id="map-right"></canvas><div class="pane-label">現代地図（三角網と写した印）</div></section>
+  <div id="divider"></div>
+  <div id="mode-buttons">
+    <button type="button" data-mode="none" aria-pressed="true">制約なし</button>
+    <button type="button" data-mode="edge" aria-pressed="false">制約あり（道を辺に）</button>
+    <button type="button" id="focus-place">場所へ戻る</button>
+  </div>
+  <div id="walk-buttons">
+    <button type="button" id="walk-start">スタート</button>
+    <button type="button" id="walk-reverse">現代地図側を歩く</button>
+  </div>
+  <div id="legend"></div>
+  <div id="source">出典: 読み込み中…</div>
+  <div id="fatal"></div>
+</div>
+<!-- v3.5: 狭い画面（スマホ）では #stage を縮尺 k で画面に収める（1200×800 以上では何もしない ∴ 収録は変わらない） -->
+<script type="module">import { fitStage } from './lib/stage-fit.mjs'; fitStage();</script>
+<script type="module" src="./demo-c.mjs"></script>
+</body>
+</html>

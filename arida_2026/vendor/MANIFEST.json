@@ -1,0 +1,23 @@
+{
+  "manifestVersion": 1,
+  "generatedBy": "demos/scripts/sync-vendor.mjs",
+  "generatedAt": "2026-10-23T07:14:14.688Z",
+  "entries": [
+    {
+      "file": "maplat_transform.js",
+      "sourcePath": "../MaplatTransform/dist/maplat_transform.js",
+      "version": "1.0.0",
+      "sha256": "62d7a5c04d42d8920a781f454257bdf69ea67bc1ad5c231e362463035dd0ef6d",
+      "bytes": 36776,
+      "copiedAt": "2026-10-23T07:14:14.688Z"
+    },
+    {
+      "file": "maplat_tin.js",
+      "sourcePath": "../MaplatTin/dist/maplat_tin.js",
+      "version": "1.0.0",
+      "sha256": "4b9e15ed67a2f231a6c224c6af03759935d1d8afc2bb7c0d49358e71dcbfe669",
+      "bytes": 142872,
+      "copiedAt": "2026-10-23T07:14:14.688Z"
+    }
+  ]
+}

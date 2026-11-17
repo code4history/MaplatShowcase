@@ -1,0 +1,243 @@
+<!doctype html>
+<html lang="ja">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>DEMO-D 1点/5点（絵図を回す）— ARIDA デモ</title>
+<style>
+  /* 1200×800 の収録面。中の canvas は lib/mapview.mjs が描く */
+  html, body {
+    margin: 0;
+    width: 100%;
+    height: 100%;
+    background: #0b0f18;
+    overflow: hidden;
+    font-family: "Hiragino Sans", "Noto Sans JP", "Yu Gothic", "Meiryo", system-ui, -apple-system, sans-serif;
+  }
+  /* 収録（Playwright）の viewport は 1200×800。面は固定して縮めない */
+  #stage {
+    position: relative;
+    width: 1200px;
+    height: 800px;
+    display: grid;
+    grid-template-columns: 600px 600px;
+    grid-template-rows: 800px;
+    background: #0f1420;
+    overflow: hidden;
+  }
+  .pane {
+    position: relative;
+    min-width: 0;
+    min-height: 0;
+    overflow: hidden;
+    background: #0f1420;
+  }
+  .pane canvas {
+    display: block;
+    width: 600px;
+    height: 800px;
+    touch-action: none;
+  }
+  /*
+   * v3.1（visual M3）: 左面の十字（5 点の中心＝canvas の中心）を表とパネルから離すため、絵図の canvas を
+   * 面より大きくして中心を (430, 396) に置く（860×840・上へ 24px）。はみ出しは面の overflow で隠す。
+   * 5 点の半径は左右の canvas の小さい方（600×800）の 1/4 ＝ 150px のまま（syncSize）。
+   */
+  #pane-left canvas#map-left {
+    position: absolute;
+    left: 0;
+    top: -24px;
+    width: 860px;
+    height: 840px;
+  }
+  /* 左右の境目。canvas の上に 2px だけ重ねる（操作は奪わない） */
+  #divider {
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    left: 599px;
+    width: 2px;
+    background: #39445a;
+    z-index: 6;
+    pointer-events: none;
+  }
+  .pane-label {
+    position: absolute;
+    top: 12px;
+    left: 12px;
+    z-index: 5;
+    padding: 4px 10px;
+    border-radius: 8px;
+    background: rgba(15, 20, 32, 0.72);
+    border: 1px solid rgba(255, 255, 255, 0.16);
+    color: #e7ecf3;
+    font-size: 20px; /* v2.8: 14 → 20px */
+    line-height: 1.3;
+    pointer-events: none;
+    -webkit-user-select: none;
+    user-select: none;
+  }
+  /* 右面のラベルは Panel（右上）と地図の出典（右下）を避けて下中央に置く */
+  .pane-label--bottom {
+    top: auto;
+    bottom: 12px;
+    left: 50%;
+    transform: translateX(-50%);
+    white-space: nowrap;
+  }
+  /* 方式の切り替えは DOM ボタン（収録は page.click で押す。スライダーは掴み判定が不安定）。
+     Panel は左（絵図）側の左上に置く ∴ ボタンは右（現代地図）側の左上に置いて重ねない */
+  #mode-buttons {
+    position: absolute;
+    top: 12px;
+    left: 12px;
+    z-index: 40;
+    display: flex;
+    gap: 8px;
+    padding: 6px;
+    border-radius: 12px;
+    background: rgba(15, 20, 32, 0.82);
+    border: 1px solid rgba(255, 255, 255, 0.2);
+    -webkit-user-select: none;
+    user-select: none;
+  }
+  #mode-buttons button {
+    min-width: 132px;
+    padding: 10px 14px;
+    border-radius: 9px;
+    /* v2.9（visual 13 の残り）: 押していないボタンは紙色 85%・墨の文字（押した状態＝墨地・白字と見分ける） */
+    border: 1px solid rgba(49, 45, 42, 0.35);
+    background: rgba(255, 255, 255, 0.85);
+    color: #312D2A;
+    font: inherit;
+    font-size: 20px; /* v2.8: 17 → 20px */
+    font-weight: 700;
+    letter-spacing: 0.02em;
+    cursor: pointer;
+  }
+  #mode-buttons button:hover { background: rgba(255, 255, 255, 0.95); }
+  /* v2.8（visual 13）: 押した状態は 4 本とも ink 地・白字（白の縁）。状態の色と分ける */
+  #mode-buttons button[aria-pressed="true"] {
+    background: #312D2A;
+    border-color: #ffffff;
+    color: #ffffff;
+    box-shadow: 0 0 0 2px #ffffff inset;
+  }
+  /* 出典は左下に常時表示（要件書 §3） */
+  #source {
+    position: absolute;
+    left: 16px;
+    bottom: 16px;
+    z-index: 10;
+    max-width: calc(100% - 32px);
+    padding: 4px 10px;
+    border-radius: 8px;
+    background: rgba(15, 20, 32, 0.78);
+    border: 1px solid rgba(255, 255, 255, 0.16);
+    color: #e7ecf3;
+    font-size: 18px; /* v2.8: 14 → 16px・v2.9（visual 1 の残り）: 18px */
+    line-height: 1.4;
+    pointer-events: none;
+    -webkit-user-select: none;
+    user-select: none;
+  }
+  /* データ読み込みの失敗・?data= の警告。地図を隠さない位置に出す */
+  #data-note {
+    position: absolute;
+    top: 16px;
+    left: 50%;
+    transform: translateX(-50%);
+    z-index: 50;
+    max-width: 720px;
+    padding: 8px 14px;
+    border-radius: 10px;
+    background: rgba(179, 38, 30, 0.92);
+    color: #fff;
+    font-size: 15px;
+    line-height: 1.5;
+    pointer-events: none;
+  }
+  #mode-buttons button#record-move { min-width: 0; font-size: 20px; }
+  /* 5 点の分解の表（資料 #14 の dᵢ θᵢ と平均）。左面の左上（5 点・Panel・下端の字幕帯を避ける） */
+  #vp5-table {
+    /* v2.8（visual 1）: 15 → 20px。幅は「上」の点（x≈300）に届かない 276px のまま、行間を詰めた */
+    position: absolute; left: 12px; top: 50px; z-index: 30; width: 276px; box-sizing: border-box;
+    padding: 6px 10px; border-radius: 12px; background: rgba(255, 255, 255, 0.94); color: #312D2A;
+    font-size: 20px; line-height: 1.25; box-shadow: 0 2px 10px rgba(0,0,0,.3); pointer-events: none;
+  }
+  #vp5-table .ttl { font-weight: 700; margin-bottom: 4px; }
+  #vp5-table table { border-collapse: collapse; width: 100%; font-variant-numeric: tabular-nums; }
+  #vp5-table th { text-align: left; padding: 1px 8px 1px 0; font-weight: 700; white-space: nowrap; }
+  #vp5-table td { padding: 1px 6px 1px 0; white-space: nowrap; text-align: right; }
+  #vp5-table tr.hd td { font-size: 20px; color: #5E5E5E; font-weight: 400; }
+  #vp5-table tr.mean td, #vp5-table tr.mean th { border-top: 1px solid #c9ced6; font-weight: 700; color: #C46A00; }
+  #vp5-table .res { margin-top: 3px; font-weight: 700; }
+  #vp5-table .sub { font-size: 20px; color: #5E5E5E; }
+  #vp5-table .key { margin-top: 2px; font-size: 20px; color: #5E5E5E; }
+  #vp5-table .key .sq { display: inline-block; width: 26px; border-top: 3px dashed #F29111; vertical-align: middle; margin-right: 4px; }
+  #vp5-table .key .ar { display: inline-block; width: 22px; border-top: 3px solid #CC0404; vertical-align: middle; margin-right: 4px; }
+  #vp5-table .key .sq.gray { border-top-color: #5f6b7a; }
+  #vp5-table .faint { opacity: 0.35; }
+  #vp5-table .key .tg { display: inline-block; width: 16px; height: 16px; box-sizing: border-box; border-radius: 50%; border: 3px solid #4a4f57; background: rgba(255, 255, 255, 0.45); vertical-align: middle; margin-right: 4px; }
+  /* v3.0: 左面（絵図）の回転・拡大ボタン。左面の右上（表・5 点・Panel・字幕帯を避ける） */
+  #turn-buttons {
+    position: absolute; top: 12px; right: 12px; z-index: 40; width: 280px; box-sizing: border-box;
+    display: flex; flex-wrap: wrap; justify-content: flex-end; gap: 6px; padding: 6px; border-radius: 12px;
+    background: rgba(15, 20, 32, 0.82); border: 1px solid rgba(255, 255, 255, 0.2);
+    -webkit-user-select: none; user-select: none;
+  }
+  #turn-buttons button {
+    padding: 6px 10px; border-radius: 9px; border: 1px solid rgba(49, 45, 42, 0.35);
+    background: rgba(255, 255, 255, 0.85); color: #312D2A; font: inherit; font-size: 20px; font-weight: 700;
+    cursor: pointer; white-space: nowrap;
+  }
+  #turn-buttons button:hover { background: rgba(255, 255, 255, 0.95); }
+  #turn-buttons button:active { background: #312D2A; color: #ffffff; }
+  /* v3.0: パネルの「両面の回転とズーム」の小さな表（数値 28px・ラベル 20px 以上） */
+  .dd-pose {
+    display: grid; grid-template-columns: auto 1fr 1fr; align-items: baseline; gap: 0 6px;
+    margin: 0 0 6px; font-variant-numeric: tabular-nums;
+  }
+  .dd-pose .h { font-size: 20px; color: #46505c; text-align: right; }
+  .dd-pose .l { font-size: 20px; color: #46505c; white-space: nowrap; }
+  .dd-pose .n { font-size: 28px; font-weight: 700; text-align: right; white-space: nowrap; }
+  .dd-pose .sep { margin-top: 8px; padding-top: 4px; border-top: 1px solid #c9ced6; }
+  .dd-pose .off { opacity: 0.45; }
+  #vp5-table .hint { margin-top: 4px; padding: 3px 6px; border-radius: 6px; background: #fff3d6; font-size: 20px; }
+  /* v3.5: タッチ（粗いポインタ）ではボタンを押せる高さに。--tap は stage-fit.mjs が縮尺 k から出す（収録面の px） */
+  @media (pointer: coarse) { #stage button { min-height: var(--tap, 36px); } }
+</style>
+</head>
+<body>
+<div id="stage">
+  <section class="pane" id="pane-left">
+    <canvas id="map-left"></canvas>
+    <div class="pane-label">古地図（絵図）</div>
+    <div id="vp5-table"></div>
+    <div id="turn-buttons" role="group" aria-label="絵図を回す・拡大する">
+      <button type="button" id="turn-left">左へ 30°</button>
+      <button type="button" id="turn-right">右へ 30°</button>
+      <button type="button" id="zoom-in">拡大</button>
+      <button type="button" id="zoom-out">縮小</button>
+      <button type="button" id="turn-reset">戻す</button>
+    </div>
+  </section>
+  <section class="pane" id="pane-right">
+    <canvas id="map-right"></canvas>
+    <div id="mode-buttons" role="group" aria-label="合わせ方">
+      <button type="button" id="mode-one" data-mode="one" aria-pressed="false">中心 1 点</button>
+      <button type="button" id="mode-five" data-mode="five" aria-pressed="true">5 点</button>
+      <button type="button" id="record-move">収録と同じ移動</button>
+    </div>
+    <div class="pane-label pane-label--bottom">現代地図（地理院タイル）</div>
+  </section>
+  <div id="divider"></div>
+  <div id="source">出典: 読み込み中…</div>
+  <div id="data-note" hidden></div>
+</div>
+
+<!-- v3.5: 狭い画面（スマホ）では #stage を縮尺 k で画面に収める（1200×800 以上では何もしない ∴ 収録は変わらない） -->
+<script type="module">import { fitStage } from './lib/stage-fit.mjs'; fitStage();</script>
+<script type="module" src="./demo-d.mjs"></script>
+</body>
+</html>

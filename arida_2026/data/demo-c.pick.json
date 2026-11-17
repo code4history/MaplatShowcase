@@ -1,0 +1,61 @@
+{
+  "version": 3,
+  "source": "naramachi_yasui_bunko",
+  "data": {
+    "none": "naramachi_yasui_bunko.grid-none",
+    "edge": "naramachi_yasui_bunko.grid-edge"
+  },
+  "edgeIndex": 616,
+  "pointA": 48,
+  "pointB": 565,
+  "points": [
+    46,
+    47,
+    48,
+    49,
+    79,
+    147,
+    148,
+    149,
+    150,
+    545,
+    561,
+    565
+  ],
+  "deviation": {
+    "none": {
+      "forwardM": 34.5,
+      "forwardPx": 216.4,
+      "backwardPx": 163,
+      "backwardM": 26
+    },
+    "edge": {
+      "forwardM": 0,
+      "forwardPx": 0,
+      "backwardPx": 0,
+      "backwardM": 0
+    }
+  },
+  "road": {
+    "lengthPx": 1753.5,
+    "lengthM": 279.5
+  },
+  "rule": {
+    "minDegree": 3,
+    "maxSinuosity": 0.02,
+    "perpTolDeg": 15,
+    "centerBox": [
+      0.25,
+      0.75
+    ],
+    "marginRatio": 0.6,
+    "maxPoints": 12,
+    "minPoints": 6,
+    "onRoadPx": 1,
+    "visibleRatio": 0.05,
+    "edgeMaxM": 0.5,
+    "edgeMaxPx": 2,
+    "stepPx": 10
+  },
+  "reason": "碁盤の目の道の候補 38 本（両端が交差点＝対応線 3 本以上の対応点・両面でまっすぐ・両端に直交する道・中点が絵図中央 50%）のうち、両方向で外れが道の長さの 5% 以上になるもので、制約なしの順方向の外れが最大の edges[616]（交差点 A=points[48] (3620, 8218) → B=points[565] (5374, 8218)・道の長さ 1753.5 px／279.5 m）。対応点は道のまわりの交差点 12 個。制約なしの外れ 順 34.5 m（216.4 px 相当）・逆 163 px（26 m 相当）、制約あり 順 0 m・逆 0 px。同点は edge index の小さい方（決定的）。"
+}
