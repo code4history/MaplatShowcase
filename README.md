@@ -11,7 +11,7 @@ Showcases for [Maplat](https://github.com/code4history/Maplat), the historical-m
 | ページ | 内容 |
 |---|---|
 | [foss4g_hiroshima_2026.html](https://code4history.github.io/MaplatShowcase/foss4g_hiroshima_2026.html) | FOSS4G Hiroshima 2026 向け自動デモ。正保年間（1640s）の広島城下絵図と明治29年（1896）の実測図の上を GPS の現在地が歩き、宮島散策・ワープ比較・三角網（制約エッジ）の種明かしまでを約3分でループ上映する |
-| [arida_2026/](https://code4history.github.io/MaplatShowcase/arida_2026/) | 動体計測研究会（ARIDA）2026-11-19 講演のデモ 4 本（往復変換・画像の縁を越える・制約辺の有無・5 点変換）。講演デッキの動画頁の QR がここの `demo-{a,b,c,d}.html` を指す。中身は AEROTOYOTA202611 の `demos/` から `demos/scripts/export-showcase.mjs` で複製したもの（`arida_2026/index.html` だけはここが正本）。手で直さない |
+| [arida_2026/](https://code4history.dev/MaplatShowcase/arida_2026/) | 動体計測研究会（ARIDA）2026-11-19 講演のデモ 4 本（往復変換・画像の縁を越える・制約辺の有無・5 点変換）。講演デッキの動画頁の QR がここの `demo-{a,b,c,d}.html` を指す。中身は AEROTOYOTA202611 の `demos/` から `demos/scripts/export-showcase.mjs` で複製したもの（`arida_2026/index.html` だけはここが正本）。手で直さない |
 
 対応する実アプリ: https://s.maplat.jp/r/hiroshimamap/
 

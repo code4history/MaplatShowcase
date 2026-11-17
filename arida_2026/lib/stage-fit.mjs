@@ -9,6 +9,8 @@
  * - 縮めても**レイアウト上の寸法は 1200×800 のまま**。画面座標（`clientX` / `getBoundingClientRect`）を
  *   収録面座標へ直すときは `toStage()` / `layoutRect()` を使う（k で割る）
  * - `--k`（数値）と `--tap`（タッチで押せるボタンの高さ。収録面の px）を #stage に出す
+ * - 縦向きかつ k < 0.5 のときだけ、面のすぐ上に「横向きにすると大きく見られます」の帯（#rotate-hint）を出す。
+ *   横向きになったら消す（resize・orientationchange で再計算）。1200×800 では出ない
  */
 
 /** 画面の大きさから縮尺を出す（純関数・テスト用） */
@@ -47,6 +49,39 @@ export function layoutSize(el) {
   return { w, h };
 }
 
+/** 向きの案内を出すか（純関数・テスト用）。**縦向きかつ k < 0.5** のときだけ */
+export function rotateHintWanted(vw, vh, k = stageScaleFor(vw, vh)) {
+  return vh > vw && k < 0.5;
+}
+
+export const ROTATE_HINT_TEXT = '横向きにすると大きく見られます / Rotate for a larger view';
+
+/** 縦向きの案内の帯（#stage の外・body 直下に置く ∴ 縮尺 k で縮まない）。無ければ作る */
+function rotateHint() {
+  let el = document.getElementById('rotate-hint');
+  if (el) return el;
+  el = document.createElement('div');
+  el.id = 'rotate-hint';
+  // 折り返すときは「 / 」の位置で折る（語の途中で折らない）。各語は inline-block
+  ROTATE_HINT_TEXT.split(' / ').forEach((part, i) => {
+    if (i > 0) el.append(' / ');
+    const span = document.createElement('span');
+    span.style.display = 'inline-block';
+    span.textContent = part;
+    el.append(span);
+  });
+  el.setAttribute('role', 'status');
+  Object.assign(el.style, {
+    position: 'fixed', left: '0', right: '0', zIndex: '1000', display: 'none',
+    // 幅 390px では 1 行に収まらず末尾が「…」で切れた ∴ 切らずに折り返す（狭い画面では 2 行になる）
+    padding: '6px 10px', textAlign: 'center', whiteSpace: 'normal',
+    font: '600 13px/1.4 "Hiragino Sans", "Noto Sans JP", system-ui, sans-serif',
+    color: '#ffffff', background: 'rgba(15, 20, 32, 0.72)', pointerEvents: 'none',
+  });
+  document.body.appendChild(el);
+  return el;
+}
+
 /** #stage を画面に収める。resize・向きの変更に追随する */
 export function fitStage(stage = document.getElementById('stage')) {
   if (!stage) return () => 1;
@@ -67,6 +102,18 @@ export function fitStage(stage = document.getElementById('stage')) {
     } else {
       stage.style.transform = '';
       stage.style.transformOrigin = '';
+    }
+    // v3.5（見直し）: 縦向きで面が小さすぎる（k < 0.5）ときだけ、面のすぐ上に向きの案内を 1 行出す
+    const hint = rotateHintWanted(vw, vh, k) ? rotateHint() : document.getElementById('rotate-hint');
+    if (hint) {
+      if (rotateHintWanted(vw, vh, k)) {
+        hint.style.display = 'block';
+        const ty = Math.max(0, (vh - H * k) / 2);
+        const h = hint.offsetHeight || 37;
+        hint.style.top = `${Math.max(0, ty - h)}px`;
+      } else {
+        hint.style.display = 'none';
+      }
     }
     window.__stageScale = k;
     return k;
