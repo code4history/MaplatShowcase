@@ -1,0 +1,129 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <title>Maplat — Every Map Is a Projection</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="description" content="Nayuta, Inc. and Maplat: why old maps look the way they do, how Maplat connects them to the modern world without redrawing them, and a proposal to treat every map as a projection. Made for the Geoawesome 100 community video, 2027.">
+  <link rel="icon" href="../app/favicon.ico">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Comfortaa:wght@500;700&family=Inter:wght@400;500;600&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+  <div id="stage">
+
+    <!-- 1. タイトル -->
+    <section id="s-title" class="scene static">
+      <h1 class="wordmark" aria-label="Maplat">M</h1>
+      <p class="lead">Historical maps, kept as drawn —<br>connected to the world.</p>
+      <img class="nayuta" src="assets/nayuta-dark.svg" alt="Nayuta, Inc.">
+    </section>
+
+    <!-- 2. 会社と Maplat -->
+    <section id="s-intro" class="scene static">
+      <img class="nayuta-big" src="assets/nayuta-dark.svg" alt="Nayuta, Inc.">
+      <ul class="facts">
+        <li><b>Nayuta, Inc.</b><span>Geospatial software, Japan</span></li>
+        <li><b>Maplat</b><span>Since 2016 · open source, Apache 2.0</span></li>
+        <li><b>MaplatEditor 1.0</b><span>Released 2026 · no programming needed</span></li>
+      </ul>
+    </section>
+
+    <!-- 3. スティックチャート -->
+    <section id="s-stick" class="scene static photo">
+      <img class="tall" src="assets/stick-chart.jpg" alt="Marshall Islands stick chart">
+      <div class="side-title">This is a map.<br><em>It shows almost no positions.</em></div>
+    </section>
+
+    <!-- 4. 京都 -->
+    <section id="s-kyoto" class="scene static">
+      <div class="pair">
+        <figure><div class="frame"><img id="kyoto-old" src="assets/kyoto-1696.jpg" alt="Map of Kyoto, 1696"><svg class="pts" id="kyoto-old-svg"></svg></div><figcaption>Kyoto, 1696</figcaption></figure>
+        <figure><div class="frame"><img id="kyoto-now" src="assets/kyoto-osm.jpg" alt="The same ground today"><svg class="pts" id="kyoto-now-svg"></svg></div><figcaption>The same ground today</figcaption></figure>
+      </div>
+    </section>
+
+    <!-- 5. 奈良 1941 -->
+    <section id="s-nara" class="scene static photo">
+      <img class="wide kenburns" src="assets/nara-1941.jpg" alt="Nara sightseeing map, 1941">
+    </section>
+
+    <!-- 6. 変形して合わせる（従来の方法）と元の絵 -->
+    <section id="s-warped" class="scene maps">
+      <div class="pane left"><canvas id="w-left"></canvas><div class="pane-label">As drawn</div></div>
+      <div class="pane right"><canvas id="w-right"></canvas><div class="pane-label">Warped to fit</div></div>
+    </section>
+
+    <!-- 7. キーメッセージ -->
+    <section id="s-key" class="scene static">
+      <p class="key">Keep the drawing.<br><em>Connect it anyway.</em></p>
+    </section>
+
+    <!-- 8. 実例: 広島のビューア -->
+    <section id="s-live" class="scene live">
+      <iframe id="maplat-frame" data-src="embed.html" title="Maplat viewer, Hiroshima"></iframe>
+      <div class="chip" id="gps-chip">Simulated GPS walk</div>
+    </section>
+
+    <!-- 9. 三角網と往復 -->
+    <section id="s-tin" class="scene maps">
+      <div class="pane left"><canvas id="t-left"></canvas><div class="pane-label">Old map · Hiroshima 1896</div></div>
+      <div class="pane right"><canvas id="t-right"></canvas><div class="pane-label">Modern map</div></div>
+      <div class="readout" id="rt-readout"></div>
+    </section>
+
+    <!-- 10. 制約辺 -->
+    <section id="s-edge" class="scene maps">
+      <div class="pane left"><canvas id="e-left"></canvas><div class="pane-label">Old map · Nara</div></div>
+      <div class="pane right"><canvas id="e-right"></canvas><div class="pane-label">Modern map</div></div>
+      <div class="legend" id="edge-legend">
+        <div class="lg lg-none"><i></i>Street crosses triangle edges</div>
+        <div class="lg lg-edge"><i></i>Street pinned as a triangle edge</div>
+      </div>
+    </section>
+
+    <!-- 11. どの地図もひとつの投影（Pro のワープは収録済みの動画で見せる） -->
+    <section id="s-proj" class="scene proj">
+      <video id="warp-video" src="assets/warp.mp4" muted playsinline preload="auto"></video>
+      <div class="proj-title" id="proj-title">Every map is a projection.</div>
+      <div class="chip right" id="pro-chip">MaplatCore Pro · in development</div>
+    </section>
+
+    <!-- 12. 2027 -->
+    <section id="s-next" class="scene static">
+      <h2>Towards 2027</h2>
+      <ul class="next">
+        <li>Coordinate systems — projections — in our next map data format</li>
+        <li>IIIF images and manifests as first-class sources</li>
+        <li>Vector data on old maps, and a hosted MaplatEditor</li>
+        <li>An MCP interface so AI tools can drive Maplat</li>
+        <li class="open">Open problem: carrying all of this into 3D</li>
+      </ul>
+    </section>
+
+    <!-- 13. 締め -->
+    <section id="s-outro" class="scene static">
+      <img class="logo-10th" src="assets/maplat-10th.svg" alt="Maplat 10th anniversary">
+      <p class="lead">Keep the drawing. Connect it anyway.</p>
+      <div class="links">
+        <span>maplat.jp</span><span>github.com/code4history/Maplat</span>
+      </div>
+      <img class="nayuta" src="assets/nayuta-dark.svg" alt="Nayuta, Inc.">
+    </section>
+
+    <!-- 共通の重ね物 -->
+    <svg id="fx" viewBox="0 0 1920 1080" aria-hidden="true"></svg>
+    <div id="tag"></div>
+    <div id="credit"></div>
+    <div id="caption"><span></span></div>
+    <div id="start" class="hidden"><button type="button">▶ Play</button></div>
+  </div>
+
+  <script type="module" src="main.mjs"></script>
+</body>
+
+</html>

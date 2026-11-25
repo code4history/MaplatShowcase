@@ -1,0 +1,311 @@
+/* Geoawesome 2027 動画用デモ。1920×1080 の舞台を画面に合わせて縮める（収録は 1920×1080 そのまま） */
+@font-face {
+  font-family: "Maplat100";
+  src: url("../demo/assets/Maplat100.ttf") format("truetype");
+}
+
+:root {
+  --ink: #0d1117;
+  --paper: #f4efe4;
+  --accent: #e8a33d;
+  --blue: #5aa9ff;
+  --green: #2fb36b;
+  --red: #ff5a4f;
+  --muted: #9aa4b2;
+}
+
+html, body {
+  margin: 0;
+  width: 100%;
+  height: 100%;
+  background: #000;
+  overflow: hidden;
+  font-family: "Inter", "Helvetica Neue", Arial, sans-serif;
+  color: #eef1f5;
+}
+
+#stage {
+  position: absolute;
+  left: 50%;
+  top: 50%;
+  width: 1920px;
+  height: 1080px;
+  margin: -540px 0 0 -960px;
+  transform: scale(var(--k, 1));
+  transform-origin: 50% 50%;
+  background: var(--ink);
+  overflow: hidden;
+}
+
+.scene {
+  position: absolute;
+  inset: 0;
+  opacity: 0;
+  visibility: hidden;
+  transition: opacity 700ms ease, visibility 0s linear 700ms;
+}
+.scene.active {
+  opacity: 1;
+  visibility: visible;
+  transition: opacity 700ms ease, visibility 0s;
+}
+
+/* ---- 静止の場面 ---- */
+.static {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  background: radial-gradient(ellipse at 50% 40%, #1b2433 0%, #0d1117 70%);
+}
+
+#s-title .wordmark {
+  font-family: "Maplat100", "Comfortaa", sans-serif;
+  font-weight: normal;
+  font-size: 300px;
+  line-height: 1;
+  margin: 0 0 40px;
+  color: #fff;
+}
+.lead {
+  font-family: "Comfortaa", sans-serif;
+  font-size: 46px;
+  line-height: 1.45;
+  text-align: center;
+  color: #dfe5ee;
+  margin: 0;
+}
+.nayuta {
+  position: absolute;
+  bottom: 70px;
+  height: 64px;
+}
+
+#s-intro .nayuta-big { height: 130px; margin-bottom: 70px; }
+.facts { list-style: none; margin: 0; padding: 0; display: flex; gap: 48px; }
+.facts li {
+  width: 470px;
+  padding: 30px 34px;
+  border-radius: 18px;
+  background: rgba(255, 255, 255, 0.06);
+  border: 1px solid rgba(255, 255, 255, 0.12);
+  opacity: 0;
+  transform: translateY(18px);
+  transition: opacity 600ms ease, transform 600ms ease;
+}
+.facts li.on { opacity: 1; transform: none; }
+.facts b { display: block; font-family: "Comfortaa", sans-serif; font-size: 40px; margin-bottom: 12px; }
+.facts span { font-size: 28px; color: #b8c2d0; }
+
+/* 写真の場面 */
+.photo { background: #0a0d12; }
+.photo img.tall { position: absolute; left: 260px; top: 40px; height: 860px; border-radius: 6px; box-shadow: 0 20px 60px rgba(0, 0, 0, 0.6); }
+.side-title {
+  position: absolute;
+  left: 900px;
+  top: 300px;
+  width: 860px;
+  font-family: "Comfortaa", sans-serif;
+  font-size: 62px;
+  line-height: 1.35;
+}
+.side-title em, .key em { font-style: normal; color: var(--accent); }
+.photo img.wide { position: absolute; left: 50%; top: 0; height: 1080px; transform: translateX(-50%) scale(1); transform-origin: 62% 38%; }
+.photo img.kenburns.run { transition: transform 11s ease-out; transform: translateX(-50%) scale(1.28); }
+
+/* 京都の 2 枚 */
+.pair { display: flex; gap: 70px; align-items: flex-start; margin-top: -120px; }
+.pair figure { margin: 0; text-align: center; }
+.pair .frame { position: relative; height: 760px; }
+.pair img { height: 760px; display: block; border-radius: 6px; }
+.pair svg.pts { position: absolute; inset: 0; width: 100%; height: 100%; overflow: visible; }
+.pair figcaption { margin-top: 14px; font-family: "Comfortaa", sans-serif; font-size: 32px; color: #cfd6e0; }
+
+.key {
+  font-family: "Comfortaa", sans-serif;
+  font-weight: 700;
+  font-size: 104px;
+  line-height: 1.3;
+  text-align: center;
+  margin: 0 0 80px;
+}
+
+/* ---- 地図 2 面 ---- */
+.maps { background: #0f1420; }
+.pane { position: absolute; top: 0; width: 958px; height: 1080px; overflow: hidden; }
+.pane.left { left: 0; }
+.pane.right { left: 962px; }
+.pane canvas { display: block; width: 958px; height: 1080px; }
+.maps::after {
+  content: "";
+  position: absolute;
+  left: 958px;
+  top: 0;
+  width: 4px;
+  height: 1080px;
+  background: #0d1117;
+}
+.pane.right .pane-label { left: auto; right: 28px; }
+.pane-label, .chip {
+  position: absolute;
+  top: 28px;
+  left: 28px;
+  padding: 8px 18px;
+  border-radius: 10px;
+  background: rgba(13, 17, 23, 0.78);
+  border: 1px solid rgba(255, 255, 255, 0.16);
+  font-size: 28px;
+  font-weight: 500;
+}
+.chip { left: auto; right: 28px; font-size: 24px; color: #cfd6e0; opacity: 0; transition: opacity 600ms; }
+.chip.on { opacity: 1; }
+.chip.right { top: 28px; }
+
+.readout {
+  position: absolute;
+  left: 50%;
+  top: 92px;
+  transform: translateX(-50%);
+  padding: 12px 26px;
+  border-radius: 12px;
+  background: rgba(13, 17, 23, 0.86);
+  border: 1px solid rgba(255, 255, 255, 0.2);
+  font-size: 34px;
+  font-weight: 600;
+  font-variant-numeric: tabular-nums;
+  opacity: 0;
+  transition: opacity 500ms;
+  white-space: nowrap;
+}
+.readout.on { opacity: 1; }
+
+.legend {
+  position: absolute;
+  right: 28px;
+  top: 100px;
+  padding: 14px 20px;
+  border-radius: 12px;
+  background: rgba(13, 17, 23, 0.82);
+  font-size: 24px;
+}
+.legend .lg { display: flex; align-items: center; gap: 12px; margin: 6px 0; opacity: 0.25; transition: opacity 500ms; }
+.legend .lg.on { opacity: 1; }
+.legend i { display: inline-block; width: 34px; height: 6px; border-radius: 3px; }
+.lg-none i { background: var(--red); }
+.lg-edge i { background: var(--green); }
+
+#warp-video { position: absolute; inset: 0; width: 1920px; height: 1080px; object-fit: cover; background: #0f1420; }
+.proj { background: #0f1420; }
+.proj-title {
+  position: absolute;
+  left: 0;
+  right: 0;
+  top: 0;
+  bottom: 0;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background: rgba(8, 11, 16, 0.55);
+  text-align: center;
+  font-family: "Comfortaa", sans-serif;
+  font-weight: 700;
+  font-size: 96px;
+  text-shadow: 0 4px 30px rgba(0, 0, 0, 0.9), 0 0 4px rgba(0, 0, 0, 0.8);
+  opacity: 0;
+  transition: opacity 900ms;
+}
+.proj-title.on { opacity: 1; }
+
+/* 2027 */
+#s-next h2 { font-family: "Comfortaa", sans-serif; font-size: 76px; margin: 0 0 50px; }
+.next { list-style: none; margin: 0 0 90px; padding: 0; width: 1300px; }
+.next li {
+  font-size: 40px;
+  line-height: 1.35;
+  padding: 16px 0 16px 56px;
+  position: relative;
+  opacity: 0;
+  transform: translateX(-20px);
+  transition: opacity 500ms, transform 500ms;
+}
+.next li::before { content: ""; position: absolute; left: 8px; top: 33px; width: 18px; height: 18px; border-radius: 50%; background: var(--accent); }
+.next li.open::before { background: transparent; border: 3px solid var(--blue); width: 14px; height: 14px; }
+.next li.open { color: #bcd8ff; }
+.next li.on { opacity: 1; transform: none; }
+
+#s-outro .logo-10th { height: 200px; margin-bottom: 40px; }
+#s-outro { padding-bottom: 120px; box-sizing: border-box; }
+#s-outro .nayuta { position: static; margin-top: 60px; }
+#s-outro .links { margin-top: 36px; display: flex; gap: 60px; font-size: 34px; color: #b8c2d0; }
+
+/* 実例（Maplat アプリ） */
+.live iframe { position: absolute; inset: 0; width: 1920px; height: 1080px; border: 0; background: #0f1420; }
+
+/* ---- 共通の重ね物 ---- */
+#fx { position: absolute; inset: 0; width: 1920px; height: 1080px; pointer-events: none; z-index: 20; }
+#tag {
+  position: absolute;
+  left: 50%;
+  top: 30px;
+  transform: translateX(-50%);
+  padding: 8px 20px;
+  border-radius: 10px;
+  background: rgba(13, 17, 23, 0.8);
+  white-space: nowrap;
+  z-index: 25;
+  font-family: "Comfortaa", sans-serif;
+  font-size: 22px;
+  letter-spacing: 3px;
+  text-transform: uppercase;
+  color: var(--accent);
+  opacity: 0;
+  transition: opacity 600ms;
+}
+#tag.on { opacity: 1; }
+#tag:empty { display: none; }
+#credit {
+  position: absolute;
+  left: 18px;
+  bottom: 10px;
+  z-index: 25;
+  font-size: 17px;
+  color: rgba(255, 255, 255, 0.72);
+  text-shadow: 0 1px 3px rgba(0, 0, 0, 0.9);
+  max-width: 1500px;
+  text-align: left;
+}
+#caption {
+  position: absolute;
+  left: 0;
+  right: 0;
+  bottom: 44px;
+  z-index: 30;
+  display: flex;
+  justify-content: center;
+  pointer-events: none;
+}
+#caption span {
+  max-width: 1560px;
+  padding: 14px 30px;
+  border-radius: 12px;
+  background: rgba(8, 11, 16, 0.82);
+  font-size: 40px;
+  line-height: 1.32;
+  font-weight: 500;
+  text-align: center;
+  opacity: 0;
+  transition: opacity 350ms;
+}
+#caption.on span { opacity: 1; }
+
+#start { position: absolute; inset: 0; z-index: 50; display: flex; align-items: center; justify-content: center; background: rgba(0, 0, 0, 0.55); }
+#start.hidden { display: none; }
+#start button {
+  font: 600 44px "Inter", sans-serif;
+  padding: 24px 60px;
+  border-radius: 16px;
+  border: 0;
+  background: var(--accent);
+  color: #111;
+  cursor: pointer;
+}
